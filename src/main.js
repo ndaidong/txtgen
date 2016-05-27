@@ -159,8 +159,8 @@
   };
 
   var make = (template) => {
-    var sentence = template;
-    var occurrences = template.match(/\{\{(.+?)\}\}/g);
+    let sentence = template;
+    let occurrences = template.match(/\{\{(.+?)\}\}/g);
 
     if (occurrences && occurrences.length) {
       for (let i = 0; i < occurrences.length; i++) {

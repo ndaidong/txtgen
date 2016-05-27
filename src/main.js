@@ -194,7 +194,7 @@
     return s;
   };
 
-  var makePhrase = (len = 0) => {
+  var makeParagraph = (len = 0) => {
     if (!len) {
       len = random(3, 10);
     }
@@ -214,7 +214,7 @@
     let t = Math.min(len, 15);
     let a = [];
     while (a.length < t) {
-      let s = makePhrase();
+      let s = makeParagraph();
       a.push(s);
     }
     return a.join('\n\n');
@@ -222,7 +222,7 @@
 
   return {
     sentence: makeSentence,
-    phrase: makePhrase,
+    paragraph: makeParagraph,
     article: makeArticle
   };
 });

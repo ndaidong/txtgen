@@ -12,7 +12,7 @@ describe('Testing txtgen APIs', () => {
 
     let keys = [
       'sentence',
-      'phrase',
+      'paragraph',
       'article'
     ];
 
@@ -45,10 +45,10 @@ describe('Testing txtgen APIs', () => {
     });
   });
 
-  describe('txtgen.phrase()', () => {
+  describe('txtgen.paragraph()', () => {
 
-    let d = txtgen.phrase();
-    it('A phrase must be created', () => {
+    let d = txtgen.paragraph();
+    it('A paragraph must be created', () => {
       expect(d).toBeDefined();
       expect(d.length).toBeGreaterThan(0);
     });

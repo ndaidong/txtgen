@@ -1,0 +1,45 @@
+{
+  "version": "0.0.1",
+  "name": "txtgen",
+  "description": "Text generator. Small tool for generating funny sentences in English",
+  "homepage": "http://techpush.net",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ndaidong/txtgen.git"
+  },
+  "author": "Dong Nguyen <ndaidong@gmail.com> (https://twitter.com/ndaidong)",
+  "main": "./index.js",
+  "engines": {
+    "node": ">= 6.0"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/tape test/start.js | tap-spec",
+    "coverage": "npm run build && ./node_modules/.bin/nyc tape test/start.js | tap-spec",
+    "report": "npm run coverage && ./node_modules/.bin/nyc report --reporter=lcov",
+    "coveralls": "npm run report && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
+    "build": "node build/minify"
+  },
+  "devDependencies": {
+    "bellajs": "^5.1.3",
+    "coveralls": "latest",
+    "nyc": "latest",
+    "tap": "^5.7.2",
+    "tap-spec": "latest",
+    "tape": "latest"
+  },
+  "keywords": [
+    "text",
+    "sentence",
+    "phrase",
+    "article",
+    "generator",
+    "util"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    "ndaidong <ndaidong@gmail.com>"
+  ],
+  "bugs": {
+    "url": "https://github.com/ndaidong/vdom/issues"
+  }
+}

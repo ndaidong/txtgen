@@ -29,7 +29,7 @@
   var sentenceTemplates = [
     'the {{noun}} is {{a_noun}}',
     '{{a_noun}} is {{an_adjective}} {{noun}}',
-    'the first {{adjective}} {noun}} is, in its own way, {{a_noun}}',
+    'the first {{adjective}} {{noun}} is, in its own way, {{a_noun}}',
     'their {{noun}} was, in this moment, {{an_adjective}} {{noun}}',
     '{{a_noun}} is {{a_noun}} from the right perspective',
     'the literature would have us believe that {{an_adjective}} {{noun}} is not but {{a_noun}}',

@@ -1,5 +1,5 @@
 {
-  "version": "0.0.41",
+  "version": "0.0.42",
   "name": "txtgen",
   "description": "Text generator. Small tool for generating funny sentences in English",
   "homepage": "http://techpush.net",
@@ -34,6 +34,8 @@
     "phrase",
     "article",
     "generator",
+    "english",
+    "language",
     "util"
   ],
   "license": "MIT",

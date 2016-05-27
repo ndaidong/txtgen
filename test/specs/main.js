@@ -18,7 +18,7 @@ var txtgen = require(path.join(rootDir, 'txtgen.min'));
 var hasMethods = (o) => {
   var structure = [
     'sentence',
-    'phrase',
+    'paragraph',
     'article'
   ];
 
@@ -40,9 +40,9 @@ test('txtgen.sentence():', (assert) => {
   assert.end();
 });
 
-test('txtgen.phrase():', (assert) => {
-  let phrase = txtgen.phrase();
-  assert.ok(bella.isString(phrase) && phrase.length > 0, 'A phrase must be created');
+test('txtgen.paragraph():', (assert) => {
+  let paragraph = txtgen.paragraph();
+  assert.ok(bella.isString(paragraph) && paragraph.length > 0, 'A paragraph must be created');
   assert.end();
 });
 

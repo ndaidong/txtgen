@@ -1,7 +1,7 @@
 # txtgen
-Util for generating random sentences, phrases and articles in English. Inspired by [Sentencer](https://github.com/kylestetz/Sentencer) and [metaphorpsum.com](http://metaphorpsum.com/).
+Util for generating random sentences, paragraphs and articles in English. Inspired by [Sentencer](https://github.com/kylestetz/Sentencer) and [metaphorpsum.com](http://metaphorpsum.com/).
 
-This lib is created to use as a new content generator in [FastTyping](https://goo.gl/EFGMsd). It's very lightweight to embed into client side (Just 159B gzip or 6.9KB minified!). Note that, it's available only in Node.js v6.0.0 or newer and the browsers with ES6 support.
+This lib is very lightweight to embed into client side (Just 159B gzip or 6.9KB minified!). Note that, it's available only in Node.js v6.0.0 or newer and the browsers with ES6 support, because it was created to use as the content generator in [FastTyping](https://goo.gl/EFGMsd).
 
 [View DEMO](http://ndaidong.github.io/txtgen/).
 

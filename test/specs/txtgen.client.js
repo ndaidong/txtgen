@@ -11,7 +11,9 @@ describe('Testing txtgen APIs', () => {
   describe('General', () => {
 
     let keys = [
-      'make'
+      'sentence',
+      'phrase',
+      'article'
     ];
 
     let check = (k) => {
@@ -23,9 +25,9 @@ describe('Testing txtgen APIs', () => {
     keys.map(check);
   });
 
-  describe('txtgen.make()', () => {
+  describe('txtgen.sentence()', () => {
 
-    let d = txtgen.make();
+    let d = txtgen.sentence();
     it('A sentence must be created', () => {
       expect(d).toBeDefined();
       expect(d.length).toBeGreaterThan(0);
@@ -33,7 +35,7 @@ describe('Testing txtgen APIs', () => {
 
     let a = [];
     while (a.length < 1000) {
-      let c = txtgen.make();
+      let c = txtgen.sentence();
       a.push(c);
     }
 
@@ -41,5 +43,25 @@ describe('Testing txtgen APIs', () => {
       expect(a).toBeDefined();
       expect(a.length).toBe(1000);
     });
+  });
+
+  describe('txtgen.phrase()', () => {
+
+    let d = txtgen.phrase();
+    it('A phrase must be created', () => {
+      expect(d).toBeDefined();
+      expect(d.length).toBeGreaterThan(0);
+    });
+
+  });
+
+  describe('txtgen.article()', () => {
+
+    let d = txtgen.article();
+    it('An article must be created', () => {
+      expect(d).toBeDefined();
+      expect(d.length).toBeGreaterThan(0);
+    });
+
   });
 });

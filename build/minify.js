@@ -14,6 +14,8 @@ const OUTPUT = 'json';
 const SOURCE = './src/';
 const DIST = './dist/';
 
+const CONFIG = require('../package.json');
+
 var send = (source) => {
   return new Promise((resolve, reject) => {
     let info = '';
@@ -60,7 +62,7 @@ var log = {
 };
 
 var minify = () => {
-  let file = SOURCE + 'vdom.js';
+  let file = SOURCE + 'main.js';
   let s = fs.readFileSync(file);
   send(s).then((json) => {
     if (json.errors) {
@@ -70,7 +72,7 @@ var minify = () => {
     } else {
       exec('rm -rf ' + DIST);
       exec('mkdir ' + DIST);
-      let fileOut = DIST + 'vdom.min.js';
+      let fileOut = DIST + CONFIG.name + '.min.js';
 
       let code = json.compiledCode;
       fs.writeFileSync(fileOut, code, 'utf8');

@@ -24,10 +24,6 @@
   var nouns = [ 'alligator', 'ant', 'bear', 'bee', 'bird', 'camel', 'cat', 'cheetah', 'chicken', 'chimpanzee', 'cow', 'crocodile', 'deer', 'dog', 'dolphin', 'duck', 'eagle', 'elephant', 'fish', 'fly', 'fox', 'frog', 'giraffe', 'goat', 'goldfish', 'hamster', 'hippopotamus', 'horse', 'kangaroo', 'kitten', 'lion', 'lobster', 'monkey', 'octopus', 'owl', 'panda', 'pig', 'puppy', 'rabbit', 'rat', 'scorpion', 'seal', 'shark', 'sheep', 'snail', 'snake', 'spider', 'squirrel', 'tiger', 'turtle', 'wolf', 'zebra', 'apple', 'apricot', 'banana', 'blackberry', 'blueberry', 'cherry', 'cranberry', 'currant', 'fig', 'grape', 'grapefruit', 'grapes', 'kiwi', 'kumquat', 'lemon', 'lime', 'melon', 'nectarine', 'orange', 'peach', 'pear', 'persimmon', 'pineapple', 'plum', 'pomegranate', 'prune', 'raspberry', 'strawberry', 'tangerine', 'watermelon' ];
   var adjectives = [ 'adaptable', 'adventurous', 'affable', 'affectionate', 'agreeable', 'alert', 'alluring', 'ambitious', 'ambitious', 'amiable', 'amicable', 'amused', 'amusing', 'boundless', 'brave', 'brave', 'bright', 'bright', 'broad-minded', 'calm', 'calm', 'capable', 'careful', 'charming', 'charming', 'cheerful', 'coherent', 'comfortable', 'communicative', 'compassionate', 'confident', 'conscientious', 'considerate', 'convivial', 'cooperative', 'courageous', 'courageous', 'courteous', 'creative', 'credible', 'cultured', 'dashing', 'dazzling', 'debonair', 'decisive', 'decisive', 'decorous', 'delightful', 'detailed', 'determined', 'determined', 'diligent', 'diligent', 'diplomatic', 'discreet', 'discreet', 'dynamic', 'dynamic', 'eager', 'easygoing', 'efficient', 'elated', 'eminent', 'emotional', 'enchanting', 'encouraging', 'endurable', 'energetic', 'energetic', 'entertaining', 'enthusiastic', 'enthusiastic', 'excellent', 'excited', 'exclusive', 'exuberant', 'exuberant', 'fabulous', 'fair', 'fair-minded', 'faithful', 'faithful', 'fantastic', 'fearless', 'fearless', 'fine', 'forceful', 'frank', 'frank', 'friendly', 'friendly', 'funny', 'funny', 'generous', 'generous', 'gentle', 'gentle', 'glorious', 'good', 'good', 'gregarious', 'happy', 'hard-working', 'harmonious', 'helpful', 'helpful', 'hilarious', 'honest', 'honorable', 'humorous', 'imaginative', 'impartial', 'impartial', 'independent', 'industrious', 'instinctive', 'intellectual', 'intelligent', 'intuitive', 'inventive', 'jolly', 'joyous', 'kind', 'kind', 'kind-hearted', 'knowledgeable', 'level', 'likeable', 'lively', 'lovely', 'loving', 'loving', 'loyal', 'lucky', 'mature', 'modern', 'modest', 'neat', 'nice', 'nice', 'obedient', 'optimistic', 'painstaking', 'passionate', 'patient', 'peaceful', 'perfect', 'persistent', 'philosophical', 'pioneering', 'placid', 'placid', 'plausible', 'pleasant', 'plucky', 'plucky', 'polite', 'powerful', 'practical', 'pro-active', 'productive', 'protective', 'proud', 'punctual', 'quick-witted', 'quiet', 'quiet', 'rational', 'receptive', 'reflective', 'reliable', 'relieved', 'reserved', 'resolute', 'resourceful', 'responsible', 'rhetorical', 'righteous', 'romantic', 'romantic', 'sedate', 'seemly', 'selective', 'self-assured', 'self-confident', 'self-disciplined', 'sensible', 'sensitive', 'sensitive', 'shrewd', 'shy', 'silly', 'sincere', 'sincere', 'skillful', 'smiling', 'sociable', 'splendid', 'steadfast', 'stimulating', 'straightforward', 'successful', 'succinct', 'sympathetic', 'talented', 'thoughtful', 'thoughtful', 'thrifty', 'tidy', 'tough', 'tough', 'trustworthy', 'unassuming', 'unbiased', 'understanding', 'unusual', 'upbeat', 'versatile', 'vigorous', 'vivacious', 'warm', 'warmhearted', 'willing', 'willing', 'wise', 'witty', 'witty', 'wonderful' ];
 
-  var inregulars = [
-    'people', 'money'
-  ];
-
   var vowels = [
     'a', 'e', 'i', 'o', 'u', 'y'
   ];
@@ -95,20 +91,28 @@
   ];
   /* eslint-enable */
 
-  var random = (max) => {
-    return Math.floor(Math.random() * max - 1);
+  var random = (min, max) => {
+    let offset = min;
+    let range = max - min + 1;
+    let rd = Math.floor(Math.random() * range) + offset;
+    return rd;
   };
 
   var rand = (a) => {
     let w;
     while (!w) {
-      w = a[random(a.length - 1)];
+      w = a[random(0, a.length - 1)];
     }
     return w;
   };
 
+  var pickLastPunc = () => {
+    let a = '.......!?!?;...'.split('');
+    return rand(a);
+  };
+
   var pluralize = (word) => {
-    if (inregulars.includes(word) || word.endsWith('s')) {
+    if (word.endsWith('s')) {
       return word;
     }
     if (word.match(/(ss|ish|ch|x|us)$/)) {
@@ -122,9 +126,7 @@
 
   var normalize = (word) => {
     let a = 'a';
-    if (inregulars.includes(word)) {
-      a = 'the';
-    } else if (word.match(/^(a|e|i|o)/)) {
+    if (word.match(/^(a|e|i|o)/)) {
       a = 'an';
     }
     return `${a} ${word}`;
@@ -154,11 +156,11 @@
   };
 
   var trim = (s) => {
-    let x = s ? s.replace(/^[\s\xa0]+|[\s\xa0]+$/g, '') : s || '';
+    let x = s.replace(/^[\s\xa0]+|[\s\xa0]+$/g, '');
     return x.replace(/\r?\n|\r/g, ' ').replace(/\s\s+|\r/g, ' ');
   };
 
-  var makeSentence = (template) => {
+  var make = (template) => {
     var sentence = template;
     var occurrences = template.match(/\{\{(.+?)\}\}/g);
 
@@ -168,9 +170,6 @@
         let result;
         if (actions.includes(action)) {
           result = generator[action]();
-        }
-        if (!result) {
-          result = '{{ ' + action + ' }}';
         }
         sentence = sentence.replace(occurrences[i], result);
       }
@@ -186,15 +185,45 @@
   };
 
   var makeSentenceFromTemplate = () => {
-    return makeSentence(rand(sentenceTemplates));
+    return make(rand(sentenceTemplates));
   };
 
-  var make = () => {
+  var makeSentence = () => {
     let phrase = randomStartingPhrase();
     return phrase + makeSentenceFromTemplate();
   };
 
+  var makePhrase = (len = 0) => {
+    if (!len) {
+      len = random(3, 10);
+    }
+    let t = Math.min(len, 15);
+    let a = [];
+    while (a.length < t) {
+      let s = makeSentence();
+      s = s.charAt(0).toUpperCase() + s.slice(1);
+      s += pickLastPunc();
+      a.push(s);
+    }
+    return a.join(' ');
+  };
+
+  var makeArticle = (len = 0) => {
+    if (!len) {
+      len = random(3, 10);
+    }
+    let t = Math.min(len, 15);
+    let a = [];
+    while (a.length < t) {
+      let s = makePhrase();
+      a.push(s);
+    }
+    return a.join('\n\n');
+  };
+
   return {
-    make: make
+    sentence: makeSentence,
+    phrase: makePhrase,
+    article: makeArticle
   };
 });

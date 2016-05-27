@@ -188,7 +188,10 @@
 
   var makeSentence = () => {
     let phrase = randomStartingPhrase();
-    return phrase + makeSentenceFromTemplate();
+    let s = phrase + makeSentenceFromTemplate();
+    s = s.charAt(0).toUpperCase() + s.slice(1);
+    s += pickLastPunc();
+    return s;
   };
 
   var makePhrase = (len = 0) => {
@@ -199,8 +202,6 @@
     let a = [];
     while (a.length < t) {
       let s = makeSentence();
-      s = s.charAt(0).toUpperCase() + s.slice(1);
-      s += pickLastPunc();
       a.push(s);
     }
     return a.join(' ');

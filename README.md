@@ -1,5 +1,9 @@
 # txtgen
-Util for generating random sentences, phrases and articles. Inspired by [Sentencer](https://github.com/kylestetz/Sentencer) and [metaphorpsum.com](http://metaphorpsum.com/). Support Node.js v6.0.0 or newer and the browsers with ES6 support. [View demo](http://ndaidong.github.io/txtgen/).
+Util for generating random sentences, phrases and articles in English. Inspired by [Sentencer](https://github.com/kylestetz/Sentencer) and [metaphorpsum.com](http://metaphorpsum.com/).
+
+Just available on Node.js v6.0.0 or newer and the browsers with ES6 support.
+
+[View DEMO](http://ndaidong.github.io/txtgen/).
 
 [![NPM](https://badge.fury.io/js/txtgen.svg)](https://badge.fury.io/js/txtgen)
 ![Travis](https://travis-ci.org/ndaidong/txtgen.svg?branch=master)

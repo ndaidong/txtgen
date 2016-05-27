@@ -243,3 +243,21 @@ a {
 @media screen and (max-width: 42em) {
   .site-footer {
     font-size: 0.9rem; } }
+
+.btn.act-btn {
+  color: #fff;
+  background-color: #009;
+}
+.btn.act-btn:active {
+  color: #eee;
+  background-color: #006;
+}
+.opt-typ {
+  margin-right: 10px;
+}
+.result-area {
+  width: 100%;
+  min-height: 300px;
+  padding: 10px;
+  border: inset 2px #ccc;
+}

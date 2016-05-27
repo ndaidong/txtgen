@@ -25,7 +25,7 @@
           <button class="btn act-btn" id="btnGenerate">Generate</button>
           <br>
           <label class="opt-typ"><input type="radio" name="typ" value="sentence" checked> Sentence</label>
-          <label class="opt-typ"><input type="radio" name="typ" value="phrase"> Phrase</label>
+          <label class="opt-typ"><input type="radio" name="typ" value="paragraph"> Paragraph</label>
           <label class="opt-typ"><input type="radio" name="typ" value="article"> Article</label>
         </p>
         <p>
@@ -48,7 +48,7 @@
         var txt = '';
         switch (typ) {
           case 'sentence': txt = txtgen.sentence(); break;
-          case 'phrase': txt = txtgen.phrase(); break;
+          case 'paragraph': txt = txtgen.paragraph(); break;
           case 'article': txt = txtgen.article(); break;
         }
         DOM.get('result').value = txt;

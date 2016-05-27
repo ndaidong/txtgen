@@ -178,7 +178,6 @@
     return sentence;
   };
 
-  // returns a starting phrase about a third of the time, otherwise it\'s empty
   var randomStartingPhrase = () => {
     if (Math.random() < 0.33) {
       return rand(phrases);

@@ -39,11 +39,12 @@
       </footer>
 
     </section>
-    <script type="text/javascript" src="dist/txtgen.min.js"></script>
-    <script type="text/javascript" src="https://cdn.rawgit.com/ndaidong/vdom/master/dist/vdom.min.js"></script>
+    <script type="text/javascript" src="scripts/txtgen.min.js"></script>
+    <script type="text/javascript" src="scripts/doc.min.js"></script>
     <script type="text/javascript">
-      DOM.Event.on('btnGenerate', 'click', (e) => {
-        DOM.Event.stop(e);
+      console.log(doc);
+      doc.Event.on('btnGenerate', 'click', (e) => {
+        doc.Event.stop(e);
         var typ = document.noop.typ.value;
         var txt = '';
         switch (typ) {
@@ -51,7 +52,7 @@
           case 'paragraph': txt = txtgen.paragraph(); break;
           case 'article': txt = txtgen.article(); break;
         }
-        DOM.get('result').value = txt;
+        doc.get('result').value = txt;
       });
     </script>
   </body>

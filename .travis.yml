@@ -3,5 +3,3 @@ node_js:
   - "6.2.1"
   - "6.1.0"
   - "6.0.0"
-after_success:
-- npm run coveralls

@@ -9,6 +9,7 @@ This lib is very lightweight to embed into client side (Just 159B gzip or 6.9KB 
 ![Travis](https://travis-ci.org/ndaidong/txtgen.svg?branch=master)
 [![Coverage Status](https://coveralls.io/repos/github/ndaidong/txtgen/badge.svg?branch=master&noop)](https://coveralls.io/github/ndaidong/txtgen?branch=master)
 ![devDependency Status](https://david-dm.org/ndaidong/txtgen.svg)
+[![Known Vulnerabilities](https://snyk.io/test/npm/txtgen/badge.svg)](https://snyk.io/test/npm/txtgen)
 
 
 # Setup

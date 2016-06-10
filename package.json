@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
   "name": "txtgen",
-  "description": "Text generator - Tool for generating random sentences in English",
+  "description": "Util for generating random sentences, paragraphs and articles in English",
   "homepage": "http://ndaidong.github.io/txtgen",
   "repository": {
     "type": "git",

@@ -1,7 +1,7 @@
 {
-  "version": "0.0.52",
+  "version": "0.1.0",
   "name": "txtgen",
-  "description": "Text generator. Small tool for generating funny sentences in English",
+  "description": "Util for generating random sentences, paragraphs and articles in English",
   "homepage": "http://ndaidong.github.io/txtgen",
   "repository": {
     "type": "git",
@@ -13,20 +13,22 @@
     "node": ">= 6.0.0"
   },
   "scripts": {
-    "test": "./node_modules/.bin/tape test/start.js | tap-spec",
+    "test": "./node_modules/.bin/snyk test && ./node_modules/.bin/tape test/start.js | tap-spec",
     "coverage": "./node_modules/.bin/nyc tape test/start.js | tap-spec",
     "report": "npm run coverage && ./node_modules/.bin/nyc report --reporter=lcov",
     "coveralls": "npm run report && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
-    "build": "node build/minify"
+    "build": "node build/minify",
+    "snyk": "./node_modules/.bin/snyk wizard"
   },
   "devDependencies": {
     "bellajs": "latest",
     "colors": "latest",
     "coveralls": "latest",
     "nyc": "latest",
+    "request": "latest",
+    "snyk": "latest",
     "tap-spec": "latest",
-    "tape": "latest",
-    "request": "latest"
+    "tape": "latest"
   },
   "keywords": [
     "text",
@@ -43,6 +45,6 @@
     "ndaidong <ndaidong@gmail.com>"
   ],
   "bugs": {
-    "url": "https://github.com/ndaidong/vdom/issues"
+    "url": "https://github.com/ndaidong/txtgen/issues"
   }
 }

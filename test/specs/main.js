@@ -14,8 +14,8 @@ var path = require('path');
 var test = require('tape');
 var bella = require('bellajs');
 
-var rootDir = '../../dist/';
-var txtgen = require(path.join(rootDir, 'txtgen.min'));
+var rootDir = '../../src/';
+var txtgen = require(path.join(rootDir, 'main'));
 
 var hasMethods = (o) => {
   var structure = [

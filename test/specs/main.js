@@ -8,8 +8,6 @@
 /* eslint no-new-func: 0*/
 /* eslint no-console: 0*/
 
-'use strict';
-
 var path = require('path');
 var test = require('tape');
 var bella = require('bellajs');

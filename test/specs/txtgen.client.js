@@ -5,8 +5,6 @@
 
 /* global txtgen */
 
-'use strict';
-
 describe('Testing txtgen APIs', () => {
   describe('General', () => {
 

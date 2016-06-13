@@ -7,7 +7,7 @@
   if (typeof module !== 'undefined' && module.exports) {
     module.exports = factory();
   } else {
-    var root = window || {};
+    let root = window || {};
     if (root.define && root.define.amd) {
       root.define([], factory);
     } else if (root.exports) {
@@ -143,7 +143,7 @@
     noun: () => {
       return rand(nouns);
     },
-    'a_noun': () => {
+    a_noun: () => { // eslint-disable-line camelcase
       return normalize(rand(nouns));
     },
     nouns: () => {
@@ -152,7 +152,7 @@
     adjective: () => {
       return rand(adjectives);
     },
-    'an_adjective': () => {
+    an_adjective: () => { // eslint-disable-line camelcase
       return normalize(rand(adjectives));
     }
   };

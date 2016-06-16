@@ -1,5 +1,5 @@
 {
-  "version": "0.1.2",
+  "version": "0.1.21",
   "name": "txtgen",
   "description": "Util for generating random sentences, paragraphs and articles in English",
   "homepage": "http://ndaidong.github.io/txtgen",
@@ -17,15 +17,15 @@
     "coverage": "./node_modules/.bin/nyc tape test/start.js | tap-spec",
     "report": "npm run coverage && ./node_modules/.bin/nyc report --reporter=lcov",
     "coveralls": "npm run report && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
-    "build": "node build/minify",
+    "build": "./node_modules/.bin/gccmin src dist",
     "snyk": "./node_modules/.bin/snyk wizard"
   },
   "devDependencies": {
     "bellajs": "latest",
     "colors": "latest",
     "coveralls": "latest",
+    "gcc-min": "latest",
     "nyc": "latest",
-    "request": "latest",
     "snyk": "latest",
     "tap-spec": "latest",
     "tape": "latest"

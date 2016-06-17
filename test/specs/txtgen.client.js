@@ -11,7 +11,10 @@ describe('Testing txtgen APIs', () => {
     let keys = [
       'sentence',
       'paragraph',
-      'article'
+      'article',
+      'addNouns',
+      'addAdjectives',
+      'addTemplates'
     ];
 
     let check = (k) => {
@@ -59,6 +62,33 @@ describe('Testing txtgen APIs', () => {
     it('An article must be created', () => {
       expect(d).toBeDefined();
       expect(d.length).toBeGreaterThan(0);
+    });
+
+  });
+
+  describe('txtgen.addNouns()', () => {
+
+    let d = txtgen.addNouns(['a', 'b', 'c']);
+    it('After adding 3 items => 85 nouns', () => {
+      expect(d).toBe(85);
+    });
+
+  });
+
+  describe('txtgen.addAdjectives()', () => {
+
+    let d = txtgen.addAdjectives(['a', 'b', 'c', 'd']);
+    it('After adding 4 items => 195 adjectives', () => {
+      expect(d).toBe(195);
+    });
+
+  });
+
+  describe('txtgen.addTemplates()', () => {
+
+    let d = txtgen.addTemplates(['a', 'b', 'c']);
+    it('After adding 3 items => 32 adjectives', () => {
+      expect(d).toBe(32);
     });
 
   });

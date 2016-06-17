@@ -1,7 +1,5 @@
 # txtgen
-Util for generating random sentences, paragraphs and articles in English. Inspired by [Sentencer](https://github.com/kylestetz/Sentencer) and [metaphorpsum.com](http://metaphorpsum.com/).
-
-This library is very lightweight to use at client side. Just about 160B gzip or 7KB minified!
+Lightweight util for generating random sentences, paragraphs and articles in English. Inspired by [Sentencer](https://github.com/kylestetz/Sentencer) and [metaphorpsum.com](http://metaphorpsum.com/).
 
 [![NPM](https://badge.fury.io/js/txtgen.svg)](https://badge.fury.io/js/txtgen)
 ![Travis](https://travis-ci.org/ndaidong/txtgen.svg?branch=master)
@@ -54,6 +52,9 @@ console.log(article);
  - .sentence()
  - .paragraph([Number totalSentences])
  - .article([Number totalParagraphs])
+ - .addNouns([Array nouns])
+ - .addAdjectives([Array adjectives])
+ - .addTemplates([Array sentenceTemplates])
 
 # Test
 

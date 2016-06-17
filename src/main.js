@@ -93,6 +93,34 @@
   ];
   /* eslint-enable */
 
+  var unique = (a) => {
+    let r = [];
+    for (let i = 0; i < a.length; i++) {
+      if (r.indexOf(a[i]) === -1) {
+        r.push(a[i]);
+      }
+    }
+    return r;
+  };
+
+  var addNouns = (ls = []) => {
+    let a = nouns.concat(ls);
+    nouns = unique(a);
+    return nouns.length;
+  };
+
+  var addAdjectives = (ls) => {
+    let a = adjectives.concat(ls);
+    adjectives = unique(a);
+    return adjectives.length;
+  };
+
+  var addTemplates = (ls) => {
+    let a = sentenceTemplates.concat(ls);
+    sentenceTemplates = unique(a);
+    return sentenceTemplates.length;
+  };
+
   var random = (min, max) => {
     let offset = min;
     let range = max - min + 1;
@@ -227,6 +255,9 @@
   return {
     sentence: makeSentence,
     paragraph: makeParagraph,
-    article: makeArticle
+    article: makeArticle,
+    addNouns,
+    addAdjectives,
+    addTemplates
   };
 });

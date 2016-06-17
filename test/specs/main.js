@@ -14,7 +14,10 @@ var hasMethods = (o) => {
   var structure = [
     'sentence',
     'paragraph',
-    'article'
+    'article',
+    'addNouns',
+    'addAdjectives',
+    'addTemplates'
   ];
 
   return structure.every((k) => {
@@ -44,5 +47,23 @@ test('txtgen.paragraph():', (assert) => {
 test('txtgen.article():', (assert) => {
   let article = txtgen.article();
   assert.ok(bella.isString(article) && article.length > 0, 'An article must be created');
+  assert.end();
+});
+
+test('txtgen.addNouns():', (assert) => {
+  let count = txtgen.addNouns([bella.createId(), bella.createId(), bella.createId()]);
+  assert.equals(count, 85, 'After adding 3 items => 85 nouns');
+  assert.end();
+});
+
+test('txtgen.addAdjectives():', (assert) => {
+  let count = txtgen.addAdjectives([bella.createId(), bella.createId(), bella.createId(), bella.createId()]);
+  assert.equals(count, 195, 'After adding 4 items => 195 adjectives');
+  assert.end();
+});
+
+test('txtgen.addTemplates():', (assert) => {
+  let count = txtgen.addTemplates([bella.createId(), bella.createId(), bella.createId()]);
+  assert.equals(count, 32, 'After adding 3 items => 32 adjectives');
   assert.end();
 });

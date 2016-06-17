@@ -1,13 +1,13 @@
 {
-  "version": "0.1.21",
+  "version": "0.1.22",
   "name": "txtgen",
   "description": "Util for generating random sentences, paragraphs and articles in English",
   "homepage": "http://ndaidong.github.io/txtgen",
   "repository": {
     "type": "git",
-    "url": "git@github.com:ndaidong/txtgen.git"
+    "url": "https://github.com/ndaidong/txtgen"
   },
-  "author": "Dong Nguyen <ndaidong@gmail.com> (https://twitter.com/ndaidong)",
+  "author": "@ndaidong",
   "main": "./index.js",
   "engines": {
     "node": ">= 6.0.0"

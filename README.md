@@ -12,68 +12,41 @@ This library is very lightweight to use at client side. Just about 160B gzip or 
 
 # Demo
 
-[How does it work?](http://ndaidong.github.io/txtgen/).
+[See how it works?](http://ndaidong.github.io/txtgen/)
 
 
-# Setup
+## Setup
 
-##### Node.js
+- Node.js
 
-```
-npm install txtgen --save
-```
+  ```
+  npm install txtgen --save
+  ```
 
-##### SystemJS
+- CDN
 
-```
-System.config({
-  baseUrl: '/path/to/js/folder',
-  map: {
-    txtgen: 'txtgen.min'
-  }
-});
+  [txtgen.min.js](https://cdn.rawgit.com/ndaidong/txtgen/master/dist/txtgen.min.js)
 
-System.import('txtgen').then((txtgen) => {
-  // use txtgen here
-});
-```
+  ```
+  <script type="text/javascript" src="https://cdn.rawgit.com/ndaidong/txtgen/master/dist/txtgen.min.js"></script>
+  ```
 
-##### RequireJS
+- This library also supports ES6 Module, AMD and UMD style.
 
-```
-require.config({
-  baseUrl: '/path/to/js/folder',
-  paths: {
-    txtgen: 'txtgen.min'
-  }
-});
-
-requirejs('txtgen', (txtgen) => {
-  // use txtgen here
-});
-
-```
-
-
-##### CDN
-
-```
-<script type="text/javascript" src="https://cdn.rawgit.com/ndaidong/txtgen/master/dist/txtgen.min.js"></script>
-```
 
 # Usage
 
 ```
-  var txtgen = require('txtgen');
+var txtgen = require('txtgen');
 
-  let sentence = txtgen.sentence();
-  console.log(sentence);
+let sentence = txtgen.sentence();
+console.log(sentence);
 
-  let paragraph = txtgen.paragraph();
-  console.log(paragraph);
+let paragraph = txtgen.paragraph();
+console.log(paragraph);
 
-  let article = txtgen.article();
-  console.log(article);
+let article = txtgen.article();
+console.log(article);
 ```
 
 # APIs

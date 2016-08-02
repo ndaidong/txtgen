@@ -1,5 +1,5 @@
 {
-  "version": "0.2.01",
+  "version": "1.0.01",
   "name": "txtgen",
   "description": "Util for generating random sentences, paragraphs and articles in English",
   "homepage": "http://ndaidong.github.io/txtgen",
@@ -13,12 +13,12 @@
     "node": ">= 6.0.0"
   },
   "scripts": {
-    "test": "./node_modules/.bin/tape test/start.js | tap-spec",
-    "coverage": "./node_modules/.bin/nyc tape test/start.js | tap-spec",
-    "report": "npm run coverage && ./node_modules/.bin/nyc report --reporter=lcov",
-    "coveralls": "npm run report && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
-    "build": "./node_modules/.bin/gccmin src dist",
-    "snyk": "./node_modules/.bin/snyk test"
+    "test": "tape test/start.js | tap-spec",
+    "coverage": "nyc tape test/start.js | tap-spec",
+    "report": "npm run coverage && nyc report --reporter=lcov",
+    "coveralls": "npm run report && cat ./coverage/lcov.info | coveralls",
+    "build": "gccmin src dist",
+    "snyk": "snyk test"
   },
   "devDependencies": {
     "bellajs": "latest",

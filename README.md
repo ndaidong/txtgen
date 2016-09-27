@@ -4,7 +4,7 @@ Lightweight util for generating random sentences, paragraphs and articles in Eng
 [![NPM](https://badge.fury.io/js/txtgen.svg)](https://badge.fury.io/js/txtgen)
 ![Travis](https://travis-ci.org/ndaidong/txtgen.svg?branch=master)
 [![Coverage Status](https://coveralls.io/repos/github/ndaidong/txtgen/badge.svg?branch=master&noop)](https://coveralls.io/github/ndaidong/txtgen?branch=master)
-[![Dependency Status](https://www.versioneye.com/user/projects/57e8dfb3bd6fa600316f905c/badge.svg?style=flat)](https://www.versioneye.com/user/projects/57e8dfb3bd6fa600316f905c)
+![devDependency Status](https://david-dm.org/ndaidong/txtgen.svg)
 [![Known Vulnerabilities](https://snyk.io/test/npm/txtgen/badge.svg)](https://snyk.io/test/npm/txtgen)
 
 

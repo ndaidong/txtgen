@@ -1,5 +1,5 @@
 {
-  "version": "1.0.02",
+  "version": "1.0.4",
   "name": "txtgen",
   "description": "Util for generating random sentences, paragraphs and articles in English",
   "homepage": "http://ndaidong.github.io/txtgen",
@@ -46,11 +46,5 @@
     "language",
     "util"
   ],
-  "license": "MIT",
-  "maintainers": [
-    "ndaidong <ndaidong@gmail.com>"
-  ],
-  "bugs": {
-    "url": "https://github.com/ndaidong/txtgen/issues"
-  }
+  "license": "MIT"
 }

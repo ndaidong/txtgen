@@ -51,8 +51,15 @@ test('txtgen.article():', (assert) => {
 });
 
 test('txtgen.addNouns():', (assert) => {
-  let count = txtgen.addNouns([bella.createId(), bella.createId(), bella.createId()]);
-  assert.equals(count, 85, 'After adding 3 items => 85 nouns');
+  let count = txtgen.addNouns([
+    bella.createId(),
+    bella.createId(),
+    bella.createId(),
+    'file',
+    'class',
+    'family'
+  ]);
+  assert.equals(count, 88, 'After adding 6 items => 88 nouns');
   assert.end();
 });
 

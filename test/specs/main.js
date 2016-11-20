@@ -10,6 +10,12 @@ var bella = require('bellajs');
 var rootDir = '../../src/';
 var txtgen = require(path.join(rootDir, 'main'));
 
+const LIMIT = 30;
+
+var hasContent = (s) => {
+  return bella.isString(s) && s.length > 0;
+};
+
 var hasMethods = (o) => {
   var structure = [
     'sentence',
@@ -33,20 +39,26 @@ test('Testing txtgen object:', (assert) => {
 });
 
 test('txtgen.sentence():', (assert) => {
-  let sentence = txtgen.sentence();
-  assert.ok(bella.isString(sentence) && sentence.length > 0, 'A sentence must be created');
+  for (let i = 0; i < LIMIT; i++) {
+    let sentence = txtgen.sentence();
+    assert.ok(hasContent(sentence), 'A sentence must be created');
+  }
   assert.end();
 });
 
 test('txtgen.paragraph():', (assert) => {
-  let paragraph = txtgen.paragraph();
-  assert.ok(bella.isString(paragraph) && paragraph.length > 0, 'A paragraph must be created');
+  for (let i = 0; i < LIMIT; i++) {
+    let paragraph = txtgen.paragraph();
+    assert.ok(hasContent(paragraph), 'A paragraph must be created');
+  }
   assert.end();
 });
 
 test('txtgen.article():', (assert) => {
-  let article = txtgen.article();
-  assert.ok(bella.isString(article) && article.length > 0, 'An article must be created');
+  for (let i = 0; i < LIMIT; i++) {
+    let article = txtgen.article();
+    assert.ok(hasContent(article), 'An article must be created');
+  }
   assert.end();
 });
 
@@ -57,9 +69,12 @@ test('txtgen.addNouns():', (assert) => {
     bella.createId(),
     'file',
     'class',
-    'family'
+    'family',
+    'profile',
+    'glass',
+    'smile'
   ]);
-  assert.equals(count, 88, 'After adding 6 items => 88 nouns');
+  assert.equals(count, 91, 'After adding 9 items => 91 nouns');
   assert.end();
 });
 

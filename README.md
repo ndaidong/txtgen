@@ -5,7 +5,7 @@ Lightweight util for generating random sentences, paragraphs and articles in Eng
 [![Build Status](https://travis-ci.org/ndaidong/txtgen.svg?branch=master)](https://travis-ci.org/ndaidong/txtgen)
 [![Coverage Status](https://coveralls.io/repos/github/ndaidong/txtgen/badge.svg?branch=master&noop)](https://coveralls.io/github/ndaidong/txtgen?branch=master)
 [![Dependency Status](https://gemnasium.com/badges/github.com/ndaidong/txtgen.svg)](https://gemnasium.com/github.com/ndaidong/txtgen)
-[![Known Vulnerabilities](https://snyk.io/test/npm/txtgen/badge.svg)](https://snyk.io/test/npm/txtgen)
+[![NSP Status](https://nodesecurity.io/orgs/techpush/projects/1b2672cb-6712-436d-bd2c-c122892775bb/badge)](https://nodesecurity.io/orgs/techpush/projects/1b2672cb-6712-436d-bd2c-c122892775bb)
 
 
 # Demo

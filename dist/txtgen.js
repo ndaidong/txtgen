@@ -1,12 +1,11 @@
 /**
  * txtgen
- * v1.0.8
- * built: Sun, 20 Nov 2016 12:53:47 GMT
+ * v1.1.0
+ * built: Sat, 27 May 2017 11:33:48 GMT
  * git: https://github.com/ndaidong/txtgen
  * author: @ndaidong
  * License: MIT
 **/
-
 
 ;(function (name, factory) {
   if (typeof module !== 'undefined' && module.exports) {
@@ -14,7 +13,7 @@
   } else {
     var root = window || {};
     if (root.define && root.define.amd) {
-      root.define([], factory);
+      root.define('txtgen', [], factory);
     } else if (root.exports) {
       root.exports = factory();
     } else {

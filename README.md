@@ -18,7 +18,7 @@ Lightweight util for generating random sentences, paragraphs and articles in Eng
 - Node.js
 
   ```
-  npm install txtgen --save
+  npm install txtgen
   ```
 
 - CDN
@@ -50,9 +50,39 @@ console.log(article);
  - .sentence()
  - .paragraph([Number totalSentences])
  - .article([Number totalParagraphs])
- - .addNouns([Array nouns])
- - .addAdjectives([Array adjectives])
- - .addTemplates([Array sentenceTemplates])
+ - .addNouns(Array nouns)
+ - .addAdjectives(Array adjectives)
+ - .addTemplates(Array sentenceTemplates)
+
+### Template
+
+If you want to add more kinds of sentence, just use `.addTemplates()` method. It expects a list of sentence templates.
+Each of sentence template is an English sentence, with the placeholders that can be replaced with any alternative word.
+
+
+For example:
+
+```
+import {
+  addTemplates
+} from 'txtgen';
+
+let templates = [
+  '{{a_noun}} is {{a_noun}} from the right perspective',
+  'the {{noun}} of {{a_noun}} becomes {{an_adjective}} {{noun}}'
+];
+
+addTemplates(templates);
+```
+
+Here are the available placeholders:
+
+- noun
+- nouns
+- a_noun
+- adjective
+- an_adjective
+
 
 ## Test
 

@@ -17,12 +17,11 @@ test('Validate production output', (assert) => {
   let a = s.split('\n');
   assert.ok(s.length > 0 && a.length > 5, 'Production file must be not empty');
 
-  assert.ok(a[1] === ` * ${pkgFake.name}`, 'Package name must be correct');
-  assert.ok(a[2] === ` * v${pkgFake.version}`, 'Package version must be correct');
-  assert.ok(a[3].startsWith(' * built:'), 'Package built time must be showed');
-  assert.ok(a[4] === ` * git: ${pkgFake.repository.url}`, 'Package repository must be correct');
-  assert.ok(a[5] === ` * author: ${pkgFake.author}`, 'Package author must be correct');
-  assert.ok(a[6] === ` * License: ${pkgFake.license}`, 'Package license must be correct');
+  assert.ok(a[1] === ` * ${pkgFake.name}@${pkgFake.version}`, 'Package name must be correct');
+  assert.ok(a[2].startsWith(' * built on:'), 'Package built time must be showed');
+  assert.ok(a[3] === ` * repository: ${pkgFake.repository.url}`, 'Package repository must be correct');
+  assert.ok(a[4] === ` * maintainer: ${pkgFake.author}`, 'Package author must be correct');
+  assert.ok(a[5] === ` * License: ${pkgFake.license}`, 'Package license must be correct');
 
   assert.end();
 });

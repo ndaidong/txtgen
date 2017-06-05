@@ -3,7 +3,7 @@ Lightweight util for generating random sentences, paragraphs and articles in Eng
 
 [![NPM](https://badge.fury.io/js/txtgen.svg)](https://badge.fury.io/js/txtgen)
 [![Build Status](https://travis-ci.org/ndaidong/txtgen.svg?branch=master)](https://travis-ci.org/ndaidong/txtgen)
-[![Coverage Status](https://coveralls.io/repos/github/ndaidong/txtgen/badge.svg?branch=master&noop)](https://coveralls.io/github/ndaidong/txtgen?branch=master)
+[![codecov](https://codecov.io/gh/ndaidong/txtgen/branch/master/graph/badge.svg)](https://codecov.io/gh/ndaidong/txtgen)
 [![Dependency Status](https://gemnasium.com/badges/github.com/ndaidong/txtgen.svg)](https://gemnasium.com/github.com/ndaidong/txtgen)
 [![NSP Status](https://nodesecurity.io/orgs/techpush/projects/1b2672cb-6712-436d-bd2c-c122892775bb/badge)](https://nodesecurity.io/orgs/techpush/projects/1b2672cb-6712-436d-bd2c-c122892775bb)
 
@@ -25,12 +25,12 @@ Lightweight util for generating random sentences, paragraphs and articles in Eng
 
   - [txtgen.js](https://cdn.rawgit.com/ndaidong/txtgen/master/dist/txtgen.js)
   - [txtgen.min.js](https://cdn.rawgit.com/ndaidong/txtgen/master/dist/txtgen.min.js)
+  - [txtgen.min.map](https://cdn.rawgit.com/ndaidong/txtgen/master/dist/txtgen.min.map)
+
+- Also supports ES6 Module, CommonJS, AMD and UMD style.
 
 
-- This library also supports ES6 Module, AMD and UMD style.
-
-
-# Usage
+### Usage
 
 ```
 var txtgen = require('txtgen');
@@ -45,7 +45,7 @@ let article = txtgen.article();
 console.log(article);
 ```
 
-# APIs
+## APIs
 
  - .sentence()
  - .paragraph([Number totalSentences])
@@ -54,7 +54,7 @@ console.log(article);
  - .addAdjectives([Array adjectives])
  - .addTemplates([Array sentenceTemplates])
 
-# Test
+## Test
 
 ```
 git clone https://github.com/ndaidong/txtgen.git

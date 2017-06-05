@@ -3,7 +3,7 @@ var path = require('path');
 /**
  * Import specs
  */
-var dir = '../test/specs/';
+var dir = '../tests/specs/';
 [
   'main', 'builtTest'
 ].forEach((script) => {

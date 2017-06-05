@@ -7,8 +7,7 @@ import {
   nouns,
   adjectives,
   sentenceTemplates,
-  phrases,
-  addNouns
+  phrases
 } from './sample';
 
 import {

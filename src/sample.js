@@ -97,4 +97,3 @@ export var addTemplates = (ls) => {
   return sentenceTemplates.length;
 };
 
-console.log('nouns origin:', nouns.length);

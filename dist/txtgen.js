@@ -1,6 +1,6 @@
 /**
  * txtgen@1.2.0
- * built on: Mon, 05 Jun 2017 01:55:20 GMT
+ * built on: Mon, 05 Jun 2017 02:06:28 GMT
  * repository: https://github.com/ndaidong/txtgen
  * maintainer: @ndaidong
  * License: MIT
@@ -76,7 +76,6 @@
     sentenceTemplates = unique(a);
     return sentenceTemplates.length;
   };
-  console.log('nouns origin:', nouns.length);
   var actions = ['noun', 'a_noun', 'nouns', 'adjective', 'an_adjective'];
   var generator = {
     noun: function noun() {

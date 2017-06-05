@@ -40,10 +40,10 @@
 
     </section>
     <script type="text/javascript" src="https://cdn.rawgit.com/ndaidong/txtgen/master/dist/txtgen.min.js"></script>
-    <script type="text/javascript" src="https://cdn.rawgit.com/ndaidong/doc/master/dist/doc.min.js"></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/ndaidong/realdom/master/dist/realdom.min.js"></script>
     <script type="text/javascript">
-      doc.Event.on('btnGenerate', 'click', (e) => {
-        doc.Event.stop(e);
+      realdom.Event.on('btnGenerate', 'click', (e) => {
+        realdom.Event.stop(e);
         var typ = document.noop.typ.value;
         var txt = '';
         switch (typ) {
@@ -51,7 +51,7 @@
           case 'paragraph': txt = txtgen.paragraph(); break;
           case 'article': txt = txtgen.article(); break;
         }
-        doc.get('result').value = txt;
+        realdom.get('result').value = txt;
       });
     </script>
   </body>

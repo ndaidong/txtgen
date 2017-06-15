@@ -49,8 +49,8 @@ var generator = {
 
 var trim = (s) => {
   return s.replace(/^[\s\xa0]+|[\s\xa0]+$/g, '')
-          .replace(/\r?\n|\r/g, ' ')
-          .replace(/\s\s+|\r/g, ' ');
+    .replace(/\r?\n|\r/g, ' ')
+    .replace(/\s\s+|\r/g, ' ');
 };
 
 var make = (template) => {

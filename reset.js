@@ -27,5 +27,3 @@ files.forEach((f) => {
     unlinkSync(f);
   }
 });
-
-

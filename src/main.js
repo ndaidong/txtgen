@@ -7,7 +7,7 @@ import {
   nouns,
   adjectives,
   sentenceTemplates,
-  phrases
+  phrases,
 } from './sample';
 
 import {
@@ -15,21 +15,21 @@ import {
   rand,
   pickLastPunc,
   pluralize,
-  normalize
+  normalize,
 } from './util';
 
 export {
   addNouns,
   addAdjectives,
-  addTemplates
+  addTemplates,
 } from './sample';
 
-var actions = [
+let actions = [
   'noun', 'a_noun', 'nouns',
-  'adjective', 'an_adjective'
+  'adjective', 'an_adjective',
 ];
 
-var generator = {
+const generator = {
   noun: () => {
     return rand(nouns);
   },
@@ -44,16 +44,16 @@ var generator = {
   },
   an_adjective: () => { // eslint-disable-line camelcase
     return normalize(rand(adjectives));
-  }
+  },
 };
 
-var trim = (s) => {
+const trim = (s) => {
   return s.replace(/^[\s\xa0]+|[\s\xa0]+$/g, '')
     .replace(/\r?\n|\r/g, ' ')
     .replace(/\s\s+|\r/g, ' ');
 };
 
-var make = (template) => {
+const make = (template) => {
   let sentence = template;
   let occurrences = template.match(/\{\{(.+?)\}\}/g);
 
@@ -70,18 +70,18 @@ var make = (template) => {
   return sentence;
 };
 
-var randomStartingPhrase = () => {
+const randomStartingPhrase = () => {
   if (Math.random() < 0.33) {
     return rand(phrases);
   }
   return '';
 };
 
-var makeSentenceFromTemplate = () => {
+const makeSentenceFromTemplate = () => {
   return make(rand(sentenceTemplates));
 };
 
-export var sentence = () => {
+export const sentence = () => {
   let phrase = randomStartingPhrase();
   let s = phrase + makeSentenceFromTemplate();
   s = s.charAt(0).toUpperCase() + s.slice(1);
@@ -89,7 +89,7 @@ export var sentence = () => {
   return s;
 };
 
-export var paragraph = (len = 0) => {
+export const paragraph = (len = 0) => {
   if (!len) {
     len = random(3, 10);
   }
@@ -102,7 +102,7 @@ export var paragraph = (len = 0) => {
   return a.join(' ');
 };
 
-export var article = (len = 0) => {
+export const article = (len = 0) => {
   if (!len) {
     len = random(3, 10);
   }

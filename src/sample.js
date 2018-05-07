@@ -1,7 +1,7 @@
 // samples
 
 import {
-  unique
+  unique,
 } from './util';
 
 /* eslint-disable */
@@ -79,19 +79,19 @@ export var phrases = [
 ];
 /* eslint-enable */
 
-export var addNouns = (ls = []) => {
+export const addNouns = (ls = []) => {
   let a = nouns.concat(ls);
   nouns = unique(a);
   return nouns.length;
 };
 
-export var addAdjectives = (ls) => {
+export const addAdjectives = (ls) => {
   let a = adjectives.concat(ls);
   adjectives = unique(a);
   return adjectives.length;
 };
 
-export var addTemplates = (ls) => {
+export const addTemplates = (ls) => {
   let a = sentenceTemplates.concat(ls);
   sentenceTemplates = unique(a);
   return sentenceTemplates.length;

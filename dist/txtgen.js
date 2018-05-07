@@ -1,6 +1,6 @@
 /**
- * txtgen@2.0.01
- * built on: Thu, 15 Jun 2017 15:35:10 GMT
+ * txtgen@2.1.1
+ * built on: Mon, 07 May 2018 08:49:31 GMT
  * repository: https://github.com/ndaidong/txtgen
  * maintainer: @ndaidong
  * License: MIT
@@ -8,7 +8,7 @@
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
   typeof define === 'function' && define.amd ? define(['exports'], factory) :
-  (factory((global.txtgen = global.txtgen || {})));
+  (factory((global.txtgen = {})));
 }(this, (function (exports) { 'use strict';
   var unique = function unique(a) {
     var r = [];

@@ -1,5 +1,5 @@
 {
-  "extends": "eslint-config-ggc",
+  "extends": "eslint-config-goes",
   "env": {
     "jasmine": true
   }

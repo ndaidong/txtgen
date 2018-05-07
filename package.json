@@ -1,5 +1,5 @@
 {
-  "version": "2.0.01",
+  "version": "2.1.1",
   "name": "txtgen",
   "description": "Util for generating random sentences, paragraphs and articles in English",
   "homepage": "http://ndaidong.github.io/txtgen",
@@ -28,17 +28,16 @@
     "reset": "node reset"
   },
   "devDependencies": {
-    "babel-cli": "6.x.x",
-    "babel-plugin-transform-remove-strict-mode": "0.x.x",
-    "babel-preset-env": "1.x.x",
-    "codecov": "2.x.x",
-    "eslint": "4.x.x",
-    "eslint-config-ggc": "1.x.x",
-    "gcc-min": "5.x.x",
-    "nsp": "2.x.x",
-    "nyc": "11.x.x",
-    "tap-spec": "4.x.x",
-    "tape": "4.x.x"
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "codecov": "^3.0.1",
+    "eslint": "^4.19.1",
+    "eslint-config-goes": "^1.0.0",
+    "gcc-min": "^6.0.3",
+    "nsp": "^3.2.1",
+    "nyc": "^11.7.1",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.9.0"
   },
   "babel": {
     "presets": [

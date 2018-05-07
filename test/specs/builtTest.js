@@ -3,12 +3,12 @@
  * @ndaidong
  */
 
-var fs = require('fs');
-var test = require('tape');
+const fs = require('fs');
+const test = require('tape');
 
-var pkgFake = require('../../package.json');
-var proFile = './dist/txtgen.js';
-var devFile = './dist/txtgen.min.js';
+const pkgFake = require('../../package.json');
+const proFile = './dist/txtgen.js';
+const devFile = './dist/txtgen.min.js';
 
 test('Validate production output', (assert) => {
   assert.ok(fs.existsSync(proFile), 'Production file must be generated');

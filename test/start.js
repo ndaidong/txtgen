@@ -1,11 +1,11 @@
-var path = require('path');
+const path = require('path');
 
 /**
  * Import specs
  */
-var dir = '../test/specs/';
+const dir = '../test/specs/';
 [
-  'main', 'builtTest'
+  'main', 'builtTest',
 ].forEach((script) => {
   require(path.join(dir, script));
 });

@@ -3,38 +3,43 @@
  * @ndaidong
  */
 
-var test = require('tape');
-var bella = require('bellajs');
+const test = require('tape');
+const {
+  isString,
+  isFunction,
+  isObject,
+  hasProperty,
+  createId,
+} = require('bellajs');
 
-var es6 = require('../../src/main');
-var full = require('../../dist/txtgen');
-var min = require('../../dist/txtgen.min');
+const es6 = require('../../src/main');
+const full = require('../../dist/txtgen');
+const min = require('../../dist/txtgen.min');
 
 const LIMIT = 30;
 
-var hasContent = (s) => {
-  return bella.isString(s) && s.length > 0;
+const hasContent = (s) => {
+  return isString(s) && s.length > 0;
 };
 
-var hasMethods = (o) => {
-  var structure = [
+const hasMethods = (o) => {
+  let structure = [
     'sentence',
     'paragraph',
     'article',
     'addNouns',
     'addAdjectives',
-    'addTemplates'
+    'addTemplates',
   ];
 
   return structure.every((k) => {
-    return bella.hasProperty(o, k) && bella.isFunction(o[k]);
+    return hasProperty(o, k) && isFunction(o[k]);
   });
 };
 
-var checkAllVariants = (txtgen) => {
-
+const checkAllVariants = (txtgen) => {
   test('Testing txtgen object:', (assert) => {
-    assert.ok(bella.isObject(txtgen), 'txtgen must be an object.');
+    assert.ok(isObject(txtgen), 'txtgen must be an object.');
     assert.ok(hasMethods(txtgen), 'txtgen must have required methods.');
     assert.end();
   });
@@ -65,28 +70,28 @@ var checkAllVariants = (txtgen) => {
 
   test('txtgen.addNouns():', (assert) => {
     let count = txtgen.addNouns([
-      bella.createId(),
-      bella.createId(),
-      bella.createId(),
+      createId(),
+      createId(),
+      createId(),
       'file',
       'class',
       'family',
       'profile',
       'glass',
-      'smile'
+      'smile',
     ]);
     assert.equals(count, 91, 'After adding 9 items => 91 nouns');
     assert.end();
   });
 
   test('txtgen.addAdjectives():', (assert) => {
-    let count = txtgen.addAdjectives([bella.createId(), bella.createId(), bella.createId(), bella.createId()]);
+    let count = txtgen.addAdjectives([createId(), createId(), createId(), createId()]);
     assert.equals(count, 195, 'After adding 4 items => 195 adjectives');
     assert.end();
   });
 
   test('txtgen.addTemplates():', (assert) => {
-    let count = txtgen.addTemplates([bella.createId(), bella.createId(), bella.createId()]);
+    let count = txtgen.addTemplates([createId(), createId(), createId()]);
     assert.equals(count, 32, 'After adding 3 items => 32 adjectives');
     assert.end();
   });

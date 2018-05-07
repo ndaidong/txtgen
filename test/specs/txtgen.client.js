@@ -7,14 +7,13 @@
 
 describe('Testing txtgen APIs', () => {
   describe('General', () => {
-
     let keys = [
       'sentence',
       'paragraph',
       'article',
       'addNouns',
       'addAdjectives',
-      'addTemplates'
+      'addTemplates',
     ];
 
     let check = (k) => {
@@ -27,7 +26,6 @@ describe('Testing txtgen APIs', () => {
   });
 
   describe('txtgen.sentence()', () => {
-
     let d = txtgen.sentence();
     it('A sentence must be created', () => {
       expect(d).toBeDefined();
@@ -47,49 +45,39 @@ describe('Testing txtgen APIs', () => {
   });
 
   describe('txtgen.paragraph()', () => {
-
     let d = txtgen.paragraph();
     it('A paragraph must be created', () => {
       expect(d).toBeDefined();
       expect(d.length).toBeGreaterThan(0);
     });
-
   });
 
   describe('txtgen.article()', () => {
-
     let d = txtgen.article();
     it('An article must be created', () => {
       expect(d).toBeDefined();
       expect(d.length).toBeGreaterThan(0);
     });
-
   });
 
   describe('txtgen.addNouns()', () => {
-
     let d = txtgen.addNouns(['a', 'b', 'c']);
     it('After adding 3 items => 85 nouns', () => {
       expect(d).toBe(85);
     });
-
   });
 
   describe('txtgen.addAdjectives()', () => {
-
     let d = txtgen.addAdjectives(['a', 'b', 'c', 'd']);
     it('After adding 4 items => 195 adjectives', () => {
       expect(d).toBe(195);
     });
-
   });
 
   describe('txtgen.addTemplates()', () => {
-
     let d = txtgen.addTemplates(['a', 'b', 'c']);
     it('After adding 3 items => 32 adjectives', () => {
       expect(d).toBe(32);
     });
-
   });
 });

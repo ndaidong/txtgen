@@ -1,0 +1,72 @@
+{
+  "version": "2.1.1",
+  "name": "txtgen",
+  "description": "Util for generating random sentences, paragraphs and articles in English",
+  "homepage": "http://ndaidong.github.io/txtgen",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ndaidong/txtgen"
+  },
+  "author": "@ndaidong",
+  "main": "./dist/txtgen.js",
+  "module": "./src/main",
+  "jsnext:main": "./src/main",
+  "browser": "./dist/txtgen.min.js",
+  "engines": {
+    "node": ">= 6.0"
+  },
+  "scripts": {
+    "lint": "eslint src test/specs",
+    "nsp": "nsp check --output checkstyle",
+    "tape": "nyc babel-node node_modules/.bin/tape test/start.js | tap-spec",
+    "report": "nyc report --reporter=lcov > coverage.lcov && codecov",
+    "pretest": "npm run lint && npm run nsp",
+    "test": "npm run tape",
+    "posttest": "CODECOV_TOKEN=0f80ffa2-ed0e-4501-ac91-49397be8b3fe npm run report",
+    "start": "babel-node src/main",
+    "build": "gccmin -e src/main.js -n txtgen -o dist -p package.json",
+    "reset": "node reset"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "codecov": "^3.0.1",
+    "eslint": "^4.19.1",
+    "eslint-config-goes": "^1.0.0",
+    "gcc-min": "^6.0.3",
+    "nsp": "^3.2.1",
+    "nyc": "^11.7.1",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.9.0"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "browsers": [
+              "> 1%"
+            ]
+          }
+        }
+      ]
+    ],
+    "plugins": [
+      [
+        "transform-remove-strict-mode"
+      ]
+    ]
+  },
+  "keywords": [
+    "text",
+    "sentence",
+    "paragraph",
+    "article",
+    "generator",
+    "english",
+    "language",
+    "util"
+  ],
+  "license": "MIT"
+}

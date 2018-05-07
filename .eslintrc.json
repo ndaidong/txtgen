@@ -1,0 +1,6 @@
+{
+  "extends": "eslint-config-goes",
+  "env": {
+    "jasmine": true
+  }
+}

@@ -3,9 +3,6 @@ Lightweight util for generating random sentences, paragraphs and articles in Eng
 
 [![NPM](https://badge.fury.io/js/txtgen.svg)](https://badge.fury.io/js/txtgen)
 [![Build Status](https://travis-ci.org/ndaidong/txtgen.svg?branch=master)](https://travis-ci.org/ndaidong/txtgen)
-[![codecov](https://codecov.io/gh/ndaidong/txtgen/branch/master/graph/badge.svg)](https://codecov.io/gh/ndaidong/txtgen)
-[![Dependency Status](https://gemnasium.com/badges/github.com/ndaidong/txtgen.svg)](https://gemnasium.com/github.com/ndaidong/txtgen)
-[![NSP Status](https://nodesecurity.io/orgs/techpush/projects/1b2672cb-6712-436d-bd2c-c122892775bb/badge)](https://nodesecurity.io/orgs/techpush/projects/1b2672cb-6712-436d-bd2c-c122892775bb)
 
 
 # Demo

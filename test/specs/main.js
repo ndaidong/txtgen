@@ -3,7 +3,7 @@
  * @ndaidong
  */
 
-const test = require('tape');
+const test = require('tap').test;
 const {
   isString,
   isFunction,
@@ -12,7 +12,6 @@ const {
   createId,
 } = require('bellajs');
 
-const es6 = require('../../src/main');
 const full = require('../../dist/txtgen');
 const min = require('../../dist/txtgen.min');
 
@@ -97,5 +96,5 @@ const checkAllVariants = (txtgen) => {
   });
 };
 
-[es6, full, min].map(checkAllVariants);
+[full, min].map(checkAllVariants);
 

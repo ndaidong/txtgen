@@ -4,7 +4,7 @@
  */
 
 const fs = require('fs');
-const test = require('tape');
+const test = require('tap').test;
 
 const pkgFake = require('../../package.json');
 const proFile = './dist/txtgen.js';

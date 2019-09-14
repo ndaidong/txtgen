@@ -22,9 +22,15 @@ export {
   addNouns,
   addAdjectives,
   addTemplates,
+  setNouns,
+  setAdjectives,
+  setTemplates,
+  getNouns,
+  getAdjectives,
+  getTemplates,
 } from './sample';
 
-let actions = [
+const actions = [
   'noun', 'a_noun', 'nouns',
   'adjective', 'an_adjective',
 ];
@@ -55,11 +61,11 @@ const trim = (s) => {
 
 const make = (template) => {
   let sentence = template;
-  let occurrences = template.match(/\{\{(.+?)\}\}/g);
+  const occurrences = template.match(/\{\{(.+?)\}\}/g);
 
   if (occurrences && occurrences.length) {
     for (let i = 0; i < occurrences.length; i++) {
-      let action = trim(occurrences[i].replace('{{', '').replace('}}', ''));
+      const action = trim(occurrences[i].replace('{{', '').replace('}}', ''));
       let result;
       if (actions.includes(action)) {
         result = generator[action]();
@@ -82,7 +88,7 @@ const makeSentenceFromTemplate = () => {
 };
 
 export const sentence = () => {
-  let phrase = randomStartingPhrase();
+  const phrase = randomStartingPhrase();
   let s = phrase + makeSentenceFromTemplate();
   s = s.charAt(0).toUpperCase() + s.slice(1);
   s += pickLastPunc();
@@ -93,10 +99,10 @@ export const paragraph = (len = 0) => {
   if (!len) {
     len = random(3, 10);
   }
-  let t = Math.min(len, 15);
-  let a = [];
+  const t = Math.min(len, 15);
+  const a = [];
   while (a.length < t) {
-    let s = sentence();
+    const s = sentence();
     a.push(s);
   }
   return a.join(' ');
@@ -106,10 +112,10 @@ export const article = (len = 0) => {
   if (!len) {
     len = random(3, 10);
   }
-  let t = Math.min(len, 15);
-  let a = [];
+  const t = Math.min(len, 15);
+  const a = [];
   while (a.length < t) {
-    let s = paragraph();
+    const s = paragraph();
     a.push(s);
   }
   return a.join('\n\n');

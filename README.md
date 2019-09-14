@@ -50,6 +50,24 @@ console.log(article);
  - .addNouns(Array nouns)
  - .addAdjectives(Array adjectives)
  - .addTemplates(Array sentenceTemplates)
+ - .setNouns(Array nouns)
+ - .setAdjectives(Array adjectives)
+ - .setTemplates(Array sentenceTemplates)
+ - .getNouns()
+ - .getAdjectives()
+ - .getTemplates()
+
+
+As their name means, we have 4 groups of methods:
+
+- `sentence()`, `paragraph()`, `article()`: generate text by given grammatical unit
+- `addNouns()`, `addAdjectives()`, `addTemplates()`: add more samples to current sample set
+- `setNouns()`, `setAdjectives()`, `setTemplates()`: replace current sample set with new ones
+- `getNouns()`, `getAdjectives()`, `getTemplates()`: get current sample set
+
+
+The `set*` and `get*` methods were added since v2.2.3 to help you customize your sample data.
+
 
 ### Template
 
@@ -59,7 +77,7 @@ Each of sentence template is an English sentence, with the placeholders that can
 
 For example:
 
-```
+```js
 import {
   addTemplates
 } from 'txtgen';
@@ -83,7 +101,7 @@ Here are the available placeholders:
 
 ## Test
 
-```
+```js
 git clone https://github.com/ndaidong/txtgen.git
 cd txtgen
 npm install

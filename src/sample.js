@@ -1,8 +1,15 @@
 // samples
 
-import {
-  unique,
-} from './util';
+const unique = (a) => {
+  const r = [];
+  for (let i = 0; i < a.length; i++) {
+    if (r.indexOf(a[i]) === -1) {
+      r.push(a[i]);
+    }
+  }
+  return r;
+};
+
 
 /* eslint-disable */
 export var nouns = [ 'alligator', 'ant', 'bear', 'bee', 'bird', 'camel', 'cat', 'cheetah', 'chicken', 'chimpanzee', 'cow', 'crocodile', 'deer', 'dog', 'dolphin', 'duck', 'eagle', 'elephant', 'fish', 'fly', 'fox', 'frog', 'giraffe', 'goat', 'goldfish', 'hamster', 'hippopotamus', 'horse', 'kangaroo', 'kitten', 'lion', 'lobster', 'monkey', 'octopus', 'owl', 'panda', 'pig', 'puppy', 'rabbit', 'rat', 'scorpion', 'seal', 'shark', 'sheep', 'snail', 'snake', 'spider', 'squirrel', 'tiger', 'turtle', 'wolf', 'zebra', 'apple', 'apricot', 'banana', 'blackberry', 'blueberry', 'cherry', 'cranberry', 'currant', 'fig', 'grape', 'grapefruit', 'grapes', 'kiwi', 'kumquat', 'lemon', 'lime', 'melon', 'nectarine', 'orange', 'peach', 'pear', 'persimmon', 'pineapple', 'plum', 'pomegranate', 'prune', 'raspberry', 'strawberry', 'tangerine', 'watermelon' ];
@@ -80,20 +87,47 @@ export var phrases = [
 /* eslint-enable */
 
 export const addNouns = (ls = []) => {
-  let a = nouns.concat(ls);
+  const a = nouns.concat(ls);
   nouns = unique(a);
   return nouns.length;
 };
 
-export const addAdjectives = (ls) => {
-  let a = adjectives.concat(ls);
+export const addAdjectives = (ls = []) => {
+  const a = adjectives.concat(ls);
   adjectives = unique(a);
   return adjectives.length;
 };
 
-export const addTemplates = (ls) => {
-  let a = sentenceTemplates.concat(ls);
+export const addTemplates = (ls = []) => {
+  const a = sentenceTemplates.concat(ls);
   sentenceTemplates = unique(a);
   return sentenceTemplates.length;
+};
+
+export const setNouns = (ls = []) => {
+  nouns = unique(ls);
+  return nouns.length;
+};
+
+export const setAdjectives = (ls = []) => {
+  adjectives = unique(ls);
+  return adjectives.length;
+};
+
+export const setTemplates = (ls = []) => {
+  sentenceTemplates = unique(ls);
+  return sentenceTemplates.length;
+};
+
+export const getNouns = () => {
+  return [...nouns];
+};
+
+export const getAdjectives = () => {
+  return [...adjectives];
+};
+
+export const getTemplates = () => {
+  return [...sentenceTemplates];
 };
 

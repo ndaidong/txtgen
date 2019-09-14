@@ -9,7 +9,8 @@ const {
   isFunction,
   isObject,
   hasProperty,
-  createId,
+  genid,
+  equals,
 } = require('bellajs');
 
 const full = require('../../dist/txtgen');
@@ -29,6 +30,12 @@ const hasMethods = (o) => {
     'addNouns',
     'addAdjectives',
     'addTemplates',
+    'setNouns',
+    'setAdjectives',
+    'setTemplates',
+    'getNouns',
+    'getAdjectives',
+    'getTemplates',
   ];
 
   return structure.every((k) => {
@@ -69,9 +76,9 @@ const checkAllVariants = (txtgen) => {
 
   test('txtgen.addNouns():', (assert) => {
     const count = txtgen.addNouns([
-      createId(),
-      createId(),
-      createId(),
+      genid(),
+      genid(),
+      genid(),
       'file',
       'class',
       'family',
@@ -84,14 +91,53 @@ const checkAllVariants = (txtgen) => {
   });
 
   test('txtgen.addAdjectives():', (assert) => {
-    const count = txtgen.addAdjectives([createId(), createId(), createId(), createId()]);
+    const count = txtgen.addAdjectives([genid(), genid(), genid(), genid()]);
     assert.equals(count, 195, 'After adding 4 items => 195 adjectives');
     assert.end();
   });
 
   test('txtgen.addTemplates():', (assert) => {
-    const count = txtgen.addTemplates([createId(), createId(), createId()]);
+    const count = txtgen.addTemplates([genid(), genid(), genid()]);
     assert.equals(count, 32, 'After adding 3 items => 32 adjectives');
+    assert.end();
+  });
+
+  test('txtgen.getNouns() and txtgen.setNouns():', (assert) => {
+    const samples = [
+      genid(),
+      genid(),
+      genid(),
+    ];
+    const count = txtgen.setNouns(samples);
+    const nouns = txtgen.getNouns();
+    assert.equals(count, 3, 'After set 3 items => 3 nouns');
+    assert.ok(equals(nouns, samples), 'Now only just added nouns exist');
+    assert.end();
+  });
+
+  test('txtgen.getAdjectives() and txtgen.setAdjectives():', (assert) => {
+    const samples = [
+      genid(),
+      genid(),
+      genid(),
+    ];
+    const count = txtgen.setAdjectives(samples);
+    const adjectives = txtgen.getAdjectives();
+    assert.equals(count, 3, 'After set 3 items => 3 adjectives');
+    assert.ok(equals(adjectives, samples), 'Now only just added adjectives exist');
+    assert.end();
+  });
+
+  test('txtgen.getTemplates() and txtgen.setTemplates():', (assert) => {
+    const samples = [
+      genid(),
+      genid(),
+      genid(),
+    ];
+    const count = txtgen.setTemplates(samples);
+    const templates = txtgen.getTemplates();
+    assert.equals(count, 3, 'After set 3 items => 3 templates');
+    assert.ok(equals(templates, samples), 'Now only just added templates exist');
     assert.end();
   });
 };

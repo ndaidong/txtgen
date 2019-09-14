@@ -67,6 +67,19 @@ describe('Testing txtgen APIs', () => {
     });
   });
 
+
+  describe('txtgen.setNouns() and txtgen.getNouns()', () => {
+    const samples = ['a', 'b', 'c'];
+    const d = txtgen.setNouns(samples);
+    it('With 3 items set to nouns, now total must be 3', () => {
+      expect(d).toEqual(3);
+    });
+    const curr = txtgen.getNouns();
+    it('Nouns sample now must be exactly what we have set', () => {
+      expect(curr).toEqual(samples);
+    });
+  });
+
   describe('txtgen.addAdjectives()', () => {
     const d = txtgen.addAdjectives(['a', 'b', 'c', 'd']);
     it('After adding 4 items => 195 adjectives', () => {
@@ -74,10 +87,34 @@ describe('Testing txtgen APIs', () => {
     });
   });
 
+  describe('txtgen.setAdjectives() and txtgen.getAdjectives()', () => {
+    const samples = ['a', 'b', 'c'];
+    const d = txtgen.setAdjectives(samples);
+    it('With 3 items set to adjectives, now total must be 3', () => {
+      expect(d).toEqual(3);
+    });
+    const curr = txtgen.getAdjectives();
+    it('Adjectives sample now must be exactly what we have set', () => {
+      expect(curr).toEqual(samples);
+    });
+  });
+
   describe('txtgen.addTemplates()', () => {
     const d = txtgen.addTemplates(['a', 'b', 'c']);
-    it('After adding 3 items => 32 adjectives', () => {
+    it('After adding 3 items => 32 templates', () => {
       expect(d).toBe(32);
+    });
+  });
+
+  describe('txtgen.setTemplates() and txtgen.getTemplates()', () => {
+    const samples = ['a', 'b', 'c'];
+    const d = txtgen.setTemplates(samples);
+    it('With 3 items set to templates, now total must be 3', () => {
+      expect(d).toEqual(3);
+    });
+    const curr = txtgen.getTemplates();
+    it('Template sample now must be exactly what we have set', () => {
+      expect(curr).toEqual(samples);
     });
   });
 });

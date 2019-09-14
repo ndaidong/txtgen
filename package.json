@@ -23,8 +23,9 @@
     "reset": "node reset"
   },
   "devDependencies": {
+    "bellajs": "^8.0.0",
     "eslint-config-goes": "^1.1.6",
-    "gcc-min": "^7.1.2",
+    "gcc-min": "^7.1.3",
     "tap": "^14.6.2"
   },
   "keywords": [

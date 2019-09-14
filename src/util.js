@@ -4,16 +4,6 @@ import {
   vowels,
 } from './sample';
 
-export const unique = (a) => {
-  const r = [];
-  for (let i = 0; i < a.length; i++) {
-    if (r.indexOf(a[i]) === -1) {
-      r.push(a[i]);
-    }
-  }
-  return r;
-};
-
 export const random = (min, max) => {
   const offset = min;
   const range = max - min + 1;

@@ -22,6 +22,12 @@ export {
   addNouns,
   addAdjectives,
   addTemplates,
+  setNouns,
+  setAdjectives,
+  setTemplates,
+  getNouns,
+  getAdjectives,
+  getTemplates,
 } from './sample';
 
 const actions = [

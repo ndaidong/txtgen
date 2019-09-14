@@ -13,7 +13,7 @@
   "jsnext:main": "./src/main",
   "browser": "./dist/txtgen.min.js",
   "engines": {
-    "node": ">= 7.6"
+    "node": ">= 8.6"
   },
   "scripts": {
     "lint": "eslint src test/specs",

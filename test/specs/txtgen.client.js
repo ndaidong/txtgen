@@ -7,7 +7,7 @@
 
 describe('Testing txtgen APIs', () => {
   describe('General', () => {
-    let keys = [
+    const keys = [
       'sentence',
       'paragraph',
       'article',
@@ -16,7 +16,7 @@ describe('Testing txtgen APIs', () => {
       'addTemplates',
     ];
 
-    let check = (k) => {
+    const check = (k) => {
       it(`txtgen.${k} must be defined`, () => {
         expect(txtgen[k]).toBeDefined();
       });
@@ -26,15 +26,15 @@ describe('Testing txtgen APIs', () => {
   });
 
   describe('txtgen.sentence()', () => {
-    let d = txtgen.sentence();
+    const d = txtgen.sentence();
     it('A sentence must be created', () => {
       expect(d).toBeDefined();
       expect(d.length).toBeGreaterThan(0);
     });
 
-    let a = [];
+    const a = [];
     while (a.length < 1000) {
-      let c = txtgen.sentence();
+      const c = txtgen.sentence();
       a.push(c);
     }
 
@@ -45,7 +45,7 @@ describe('Testing txtgen APIs', () => {
   });
 
   describe('txtgen.paragraph()', () => {
-    let d = txtgen.paragraph();
+    const d = txtgen.paragraph();
     it('A paragraph must be created', () => {
       expect(d).toBeDefined();
       expect(d.length).toBeGreaterThan(0);
@@ -53,7 +53,7 @@ describe('Testing txtgen APIs', () => {
   });
 
   describe('txtgen.article()', () => {
-    let d = txtgen.article();
+    const d = txtgen.article();
     it('An article must be created', () => {
       expect(d).toBeDefined();
       expect(d.length).toBeGreaterThan(0);
@@ -61,21 +61,21 @@ describe('Testing txtgen APIs', () => {
   });
 
   describe('txtgen.addNouns()', () => {
-    let d = txtgen.addNouns(['a', 'b', 'c']);
+    const d = txtgen.addNouns(['a', 'b', 'c']);
     it('After adding 3 items => 85 nouns', () => {
       expect(d).toBe(85);
     });
   });
 
   describe('txtgen.addAdjectives()', () => {
-    let d = txtgen.addAdjectives(['a', 'b', 'c', 'd']);
+    const d = txtgen.addAdjectives(['a', 'b', 'c', 'd']);
     it('After adding 4 items => 195 adjectives', () => {
       expect(d).toBe(195);
     });
   });
 
   describe('txtgen.addTemplates()', () => {
-    let d = txtgen.addTemplates(['a', 'b', 'c']);
+    const d = txtgen.addTemplates(['a', 'b', 'c']);
     it('After adding 3 items => 32 adjectives', () => {
       expect(d).toBe(32);
     });

@@ -5,7 +5,7 @@ import {
 } from './sample';
 
 export const unique = (a) => {
-  let r = [];
+  const r = [];
   for (let i = 0; i < a.length; i++) {
     if (r.indexOf(a[i]) === -1) {
       r.push(a[i]);
@@ -15,9 +15,9 @@ export const unique = (a) => {
 };
 
 export const random = (min, max) => {
-  let offset = min;
-  let range = max - min + 1;
-  let rd = Math.floor(Math.random() * range) + offset;
+  const offset = min;
+  const range = max - min + 1;
+  const rd = Math.floor(Math.random() * range) + offset;
   return rd;
 };
 
@@ -30,7 +30,7 @@ export const rand = (a) => {
 };
 
 export const pickLastPunc = () => {
-  let a = '.......!?!?;...'.split('');
+  const a = '.......!?!?;...'.split('');
   return rand(a);
 };
 

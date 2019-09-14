@@ -80,19 +80,19 @@ export var phrases = [
 /* eslint-enable */
 
 export const addNouns = (ls = []) => {
-  let a = nouns.concat(ls);
+  const a = nouns.concat(ls);
   nouns = unique(a);
   return nouns.length;
 };
 
 export const addAdjectives = (ls) => {
-  let a = adjectives.concat(ls);
+  const a = adjectives.concat(ls);
   adjectives = unique(a);
   return adjectives.length;
 };
 
 export const addTemplates = (ls) => {
-  let a = sentenceTemplates.concat(ls);
+  const a = sentenceTemplates.concat(ls);
   sentenceTemplates = unique(a);
   return sentenceTemplates.length;
 };

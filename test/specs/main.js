@@ -22,7 +22,7 @@ const hasContent = (s) => {
 };
 
 const hasMethods = (o) => {
-  let structure = [
+  const structure = [
     'sentence',
     'paragraph',
     'article',
@@ -45,7 +45,7 @@ const checkAllVariants = (txtgen) => {
 
   test('txtgen.sentence():', (assert) => {
     for (let i = 0; i < LIMIT; i++) {
-      let sentence = txtgen.sentence();
+      const sentence = txtgen.sentence();
       assert.ok(hasContent(sentence), 'A sentence must be created');
     }
     assert.end();
@@ -53,7 +53,7 @@ const checkAllVariants = (txtgen) => {
 
   test('txtgen.paragraph():', (assert) => {
     for (let i = 0; i < LIMIT; i++) {
-      let paragraph = txtgen.paragraph();
+      const paragraph = txtgen.paragraph();
       assert.ok(hasContent(paragraph), 'A paragraph must be created');
     }
     assert.end();
@@ -61,14 +61,14 @@ const checkAllVariants = (txtgen) => {
 
   test('txtgen.article():', (assert) => {
     for (let i = 0; i < LIMIT; i++) {
-      let article = txtgen.article();
+      const article = txtgen.article();
       assert.ok(hasContent(article), 'An article must be created');
     }
     assert.end();
   });
 
   test('txtgen.addNouns():', (assert) => {
-    let count = txtgen.addNouns([
+    const count = txtgen.addNouns([
       createId(),
       createId(),
       createId(),
@@ -84,13 +84,13 @@ const checkAllVariants = (txtgen) => {
   });
 
   test('txtgen.addAdjectives():', (assert) => {
-    let count = txtgen.addAdjectives([createId(), createId(), createId(), createId()]);
+    const count = txtgen.addAdjectives([createId(), createId(), createId(), createId()]);
     assert.equals(count, 195, 'After adding 4 items => 195 adjectives');
     assert.end();
   });
 
   test('txtgen.addTemplates():', (assert) => {
-    let count = txtgen.addTemplates([createId(), createId(), createId()]);
+    const count = txtgen.addTemplates([createId(), createId(), createId()]);
     assert.equals(count, 32, 'After adding 3 items => 32 adjectives');
     assert.end();
   });

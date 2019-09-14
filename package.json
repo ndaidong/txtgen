@@ -1,5 +1,5 @@
 {
-  "version": "2.2.2",
+  "version": "2.2.3",
   "name": "txtgen",
   "description": "Util for generating random sentences, paragraphs and articles in English",
   "homepage": "http://ndaidong.github.io/txtgen",
@@ -23,10 +23,9 @@
     "reset": "node reset"
   },
   "devDependencies": {
-    "eslint": "^4.19.1",
-    "eslint-config-goes": "^1.0.0",
-    "gcc-min": "^7.0.1",
-    "tap": "^12.0.1"
+    "eslint-config-goes": "^1.1.6",
+    "gcc-min": "^7.1.2",
+    "tap": "^14.6.2"
   },
   "keywords": [
     "text",

@@ -4,11 +4,10 @@ node_js:
   - "10.16"
   - "8.6"
 git:
-  depth: 2
+  depth: 1
 env:
-  - CODECOV_TOKEN=0f80ffa2-ed0e-4501-ac91-49397be8b3fe
+  - COVERALLS_REPO_TOKEN=uNieIiCHJOBjGpMebifKKYkKLGB7qpTPj
 before_script:
   - npm i
 script:
   - npm test
-  - npm run codecov

@@ -19,13 +19,11 @@
     "lint": "eslint src tests/specs",
     "pretest": "npm run lint && npm run build",
     "test": "tap tests/start.js --coverage --reporter=spec",
-    "codecov": "tap --coverage-report=text-lcov | codecov",
     "build": "gccmin -e src/main.js -n txtgen -o dist -p package.json",
     "reset": "node reset"
   },
   "devDependencies": {
     "bellajs": "^8.0.0",
-    "codecov": "^3.6.1",
     "eslint-config-goes": "^1.1.6",
     "gcc-min": "^7.1.5",
     "tap": "^14.8.0"

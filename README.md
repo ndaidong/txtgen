@@ -3,7 +3,7 @@ Lightweight util for generating random sentences, paragraphs and articles in Eng
 
 [![NPM](https://badge.fury.io/js/txtgen.svg)](https://badge.fury.io/js/txtgen)
 [![Build Status](https://travis-ci.org/ndaidong/txtgen.svg?branch=master)](https://travis-ci.org/ndaidong/txtgen)
-[![codecov](https://codecov.io/gh/ndaidong/txtgen/branch/master/graph/badge.svg)](https://codecov.io/gh/ndaidong/txtgen)
+[![Coverage Status](https://coveralls.io/repos/github/ndaidong/txtgen/badge.svg?branch=master)](https://coveralls.io/github/ndaidong/txtgen?branch=master)
 
 
 # Demo

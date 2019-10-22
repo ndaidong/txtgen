@@ -6,7 +6,7 @@ node_js:
 git:
   depth: 1
 env:
-  - COVERALLS_REPO_TOKEN=uNieIiCHJOBjGpMebifKKYkKLGB7qpTPj
+  - COVERALLS_REPO_TOKEN=ZrJBcJcnHSetnMhYUBqc0tA7P1Wnt1J9K
 before_script:
   - npm i
 script:

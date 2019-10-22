@@ -3,6 +3,7 @@ Lightweight util for generating random sentences, paragraphs and articles in Eng
 
 [![NPM](https://badge.fury.io/js/txtgen.svg)](https://badge.fury.io/js/txtgen)
 [![Build Status](https://travis-ci.org/ndaidong/txtgen.svg?branch=master)](https://travis-ci.org/ndaidong/txtgen)
+[![Coverage Status](https://coveralls.io/repos/github/ndaidong/txtgen/badge.svg?branch=master)](https://coveralls.io/github/ndaidong/txtgen?branch=master)
 
 
 # Demo
@@ -29,16 +30,16 @@ Lightweight util for generating random sentences, paragraphs and articles in Eng
 
 ### Usage
 
-```
-var txtgen = require('txtgen');
+```js
+const txtgen = require('txtgen');
 
-let sentence = txtgen.sentence();
+const sentence = txtgen.sentence();
 console.log(sentence);
 
-let paragraph = txtgen.paragraph();
+const paragraph = txtgen.paragraph();
 console.log(paragraph);
 
-let article = txtgen.article();
+const article = txtgen.article();
 console.log(article);
 ```
 

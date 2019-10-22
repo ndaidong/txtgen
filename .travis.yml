@@ -9,7 +9,6 @@ env:
   - CODECOV_TOKEN=0f80ffa2-ed0e-4501-ac91-49397be8b3fe
 before_script:
   - npm i
-  - npm i -g codecov
 script:
   - npm test
-  - codecov
+  - npm run codecov

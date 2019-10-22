@@ -7,14 +7,14 @@ const test = require('tap').test;
 const {
   isString,
   isFunction,
-  isObject,
   hasProperty,
   genid,
   equals,
 } = require('bellajs');
 
-const full = require('../../dist/txtgen');
-const min = require('../../dist/txtgen.min');
+const {
+  variants,
+} = require('../config');
 
 const LIMIT = 30;
 
@@ -45,7 +45,6 @@ const hasMethods = (o) => {
 
 const checkAllVariants = (txtgen) => {
   test('Testing txtgen object:', (assert) => {
-    assert.ok(isObject(txtgen), 'txtgen must be an object.');
     assert.ok(hasMethods(txtgen), 'txtgen must have required methods.');
     assert.end();
   });
@@ -142,5 +141,5 @@ const checkAllVariants = (txtgen) => {
   });
 };
 
-[full, min].map(checkAllVariants);
+variants.map(checkAllVariants);
 

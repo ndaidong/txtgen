@@ -1,5 +1,13 @@
 language: node_js
 node_js:
-  - "12.10"
+  - "12.13"
   - "10.16"
   - "8.6"
+git:
+  depth: 2
+env:
+  - COVERALLS_REPO_TOKEN=mIcJxgKQVJ4v8F94SF7S8VvjqREkKSu0w
+before_script:
+  - npm i
+script:
+  - npm test

@@ -24,7 +24,6 @@
   },
   "devDependencies": {
     "bellajs": "^8.0.0",
-    "coveralls": "^3.0.7",
     "eslint-config-goes": "^1.1.6",
     "gcc-min": "^7.1.5",
     "tap": "^14.8.0"

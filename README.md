@@ -4,6 +4,7 @@ Lightweight util for generating random sentences, paragraphs and articles in Eng
 [![NPM](https://badge.fury.io/js/txtgen.svg)](https://badge.fury.io/js/txtgen)
 [![Build Status](https://travis-ci.org/ndaidong/txtgen.svg?branch=master)](https://travis-ci.org/ndaidong/txtgen)
 [![Coverage Status](https://coveralls.io/repos/github/ndaidong/txtgen/badge.svg?branch=master)](https://coveralls.io/github/ndaidong/txtgen?branch=master)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fndaidong%2Ftxtgen.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fndaidong%2Ftxtgen?ref=badge_shield)
 
 
 # Demo
@@ -112,3 +113,6 @@ npm test
 # License
 
 The MIT License (MIT)
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fndaidong%2Ftxtgen.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fndaidong%2Ftxtgen?ref=badge_large)

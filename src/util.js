@@ -4,17 +4,27 @@ import {
   vowels,
 } from './sample';
 
-export const random = (min, max) => {
+let random;
+
+export const setRandom = (newRandom) => {
+  random = newRandom;
+};
+
+setRandom(Math.random);
+
+export const randfloat = () => random();
+
+export const randint = (min, max) => {
   const offset = min;
   const range = max - min + 1;
-  const rd = Math.floor(Math.random() * range) + offset;
+  const rd = Math.floor(randfloat() * range) + offset;
   return rd;
 };
 
 export const rand = (a) => {
   let w;
   while (!w) {
-    w = a[random(0, a.length - 1)];
+    w = a[randint(0, a.length - 1)];
   }
   return w;
 };

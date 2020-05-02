@@ -1,6 +1,6 @@
 /**
  * txtgen@2.2.5
- * built on: Tue, 22 Oct 2019 08:49:57 GMT
+ * built on: Sat, 28 Mar 2020 17:21:45 GMT
  * repository: https://github.com/ndaidong/txtgen
  * maintainer: @ndaidong
  * License: MIT
@@ -9,7 +9,7 @@
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
   typeof define === 'function' && define.amd ? define(['exports'], factory) :
   (global = global || self, factory(global.txtgen = {}));
-}(this, function (exports) {
+}(this, (function (exports) {
   const unique = (a) => {
     const r = [];
     for (let i = 0; i < a.length; i++) {
@@ -125,16 +125,22 @@
     return [...sentenceTemplates];
   };
 
-  const random = (min, max) => {
+  let random;
+  const setRandom = (newRandom) => {
+    random = newRandom;
+  };
+  setRandom(Math.random);
+  const randfloat = () => random();
+  const randint = (min, max) => {
     const offset = min;
     const range = max - min + 1;
-    const rd = Math.floor(Math.random() * range) + offset;
+    const rd = Math.floor(randfloat() * range) + offset;
     return rd;
   };
   const rand = (a) => {
     let w;
     while (!w) {
-      w = a[random(0, a.length - 1)];
+      w = a[randint(0, a.length - 1)];
     }
     return w;
   };
@@ -204,7 +210,7 @@
     return sentence;
   };
   const randomStartingPhrase = () => {
-    if (Math.random() < 0.33) {
+    if (randfloat() < 0.33) {
       return rand(phrases);
     }
     return '';
@@ -221,7 +227,7 @@
   };
   const paragraph = (len = 0) => {
     if (!len) {
-      len = random(3, 10);
+      len = randint(3, 10);
     }
     const t = Math.min(len, 15);
     const a = [];
@@ -233,7 +239,7 @@
   };
   const article = (len = 0) => {
     if (!len) {
-      len = random(3, 10);
+      len = randint(3, 10);
     }
     const t = Math.min(len, 15);
     const a = [];
@@ -255,8 +261,9 @@
   exports.sentence = sentence;
   exports.setAdjectives = setAdjectives;
   exports.setNouns = setNouns;
+  exports.setRandom = setRandom;
   exports.setTemplates = setTemplates;
 
   Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));

@@ -11,7 +11,9 @@ import {
 } from './sample';
 
 import {
-  random,
+  setRandom,
+  randfloat,
+  randint,
   rand,
   pickLastPunc,
   pluralize,
@@ -77,7 +79,7 @@ const make = (template) => {
 };
 
 const randomStartingPhrase = () => {
-  if (Math.random() < 0.33) {
+  if (randfloat() < 0.33) {
     return rand(phrases);
   }
   return '';
@@ -85,6 +87,10 @@ const randomStartingPhrase = () => {
 
 const makeSentenceFromTemplate = () => {
   return make(rand(sentenceTemplates));
+};
+
+export {
+  setRandom,
 };
 
 export const sentence = () => {
@@ -97,7 +103,7 @@ export const sentence = () => {
 
 export const paragraph = (len = 0) => {
   if (!len) {
-    len = random(3, 10);
+    len = randint(3, 10);
   }
   const t = Math.min(len, 15);
   const a = [];
@@ -110,7 +116,7 @@ export const paragraph = (len = 0) => {
 
 export const article = (len = 0) => {
   if (!len) {
-    len = random(3, 10);
+    len = randint(3, 10);
   }
   const t = Math.min(len, 15);
   const a = [];

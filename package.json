@@ -38,5 +38,6 @@
     "language",
     "util"
   ],
+  "types": "./src/types",
   "license": "MIT"
 }

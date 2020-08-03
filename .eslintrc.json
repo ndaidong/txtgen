@@ -1,6 +1,7 @@
 {
   "extends": "eslint-config-goes",
   "env": {
-    "jasmine": true
+    "jasmine": true,
+    "jest": true
   }
 }

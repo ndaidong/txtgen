@@ -17,8 +17,7 @@ export const randfloat = () => random();
 export const randint = (min, max) => {
   const offset = min;
   const range = max - min + 1;
-  const rd = Math.floor(randfloat() * range) + offset;
-  return rd;
+  return Math.floor(randfloat() * range) + offset;
 };
 
 export const rand = (a) => {

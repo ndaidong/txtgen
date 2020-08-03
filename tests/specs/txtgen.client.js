@@ -118,3 +118,8 @@ describe('Testing txtgen APIs', () => {
     });
   });
 });
+
+// txtgen.setTemplates([]);
+console.log(txtgen.getTemplates());
+const sentence2 = txtgen.paragraph(2);
+console.log(sentence2);

@@ -6,6 +6,7 @@ steps:
 - name: test
   image: node:slim
   commands:
+  - npm i -g coveralls
   - npm i
   - npm test
   - cat coverage/lcov.info | coveralls
@@ -18,6 +19,7 @@ steps:
 - name: test
   image: node:13-slim
   commands:
+  - npm i -g coveralls
   - npm i
   - npm test
   - cat coverage/lcov.info | coveralls
@@ -30,6 +32,7 @@ steps:
 - name: test
   image: node:10.14.2-slim
   commands:
+  - npm i -g coveralls
   - npm i
   - npm test
   - cat coverage/lcov.info | coveralls

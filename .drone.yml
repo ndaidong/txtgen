@@ -1,9 +1,34 @@
+---
 kind: pipeline
-name: default
+name: nodelatest
 
 steps:
 - name: test
-  image: node
+  image: node:slim
+  commands:
+  - npm i
+  - npm test
+  - cat coverage/lcov.info | coveralls
+
+---
+kind: pipeline
+name: node13
+
+steps:
+- name: test
+  image: node:13-slim
+  commands:
+  - npm i
+  - npm test
+  - cat coverage/lcov.info | coveralls
+
+---
+kind: pipeline
+name: node10
+
+steps:
+- name: test
+  image: node:10.14.2-slim
   commands:
   - npm i
   - npm test

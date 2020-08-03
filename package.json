@@ -24,11 +24,11 @@
     "reset": "node reset"
   },
   "devDependencies": {
-    "bellajs": "^8.0.2",
+    "bellajs": "^9.2.0",
     "dtslint": "^3.6.14",
     "eslint-config-goes": "^1.1.8",
     "gcc-min": "^7.2.0",
-    "tap": "^14.10.7",
+    "tap": "^14.10.8",
     "typescript": "^3.9.7"
   },
   "keywords": [

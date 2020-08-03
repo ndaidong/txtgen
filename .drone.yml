@@ -1,0 +1,10 @@
+---
+kind: pipeline
+name: nodelatest
+
+steps:
+- name: test
+  image: node:alpine
+  commands:
+  - npm install
+  - npm test

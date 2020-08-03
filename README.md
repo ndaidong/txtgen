@@ -15,15 +15,17 @@ Lightweight util for generating random sentences, paragraphs and articles in Eng
 
 - Node.js
 
-  ```
-  npm install txtgen
+  ```bash
+  npm i txtgen
   ```
 
 - CDN
 
-  - [txtgen.js](https://cdn.rawgit.com/ndaidong/txtgen/master/dist/txtgen.js)
-  - [txtgen.min.js](https://cdn.rawgit.com/ndaidong/txtgen/master/dist/txtgen.min.js)
-  - [txtgen.min.map](https://cdn.rawgit.com/ndaidong/txtgen/master/dist/txtgen.min.map)
+  - [txtgen.js](https://unpkg.com/txtgen/dist/txtgen.js)
+  - [txtgen.min.js](https://unpkg.com/txtgen/dist/txtgen.min.js)
+  - [txtgen.min.map](https://unpkg.com/txtgen/dist/txtgen.min.map)
+
+
 
 - Also supports ES6 Module, CommonJS, AMD and UMD style.
 
@@ -102,10 +104,10 @@ Here are the available placeholders:
 
 ## Test
 
-```js
+```bash
 git clone https://github.com/ndaidong/txtgen.git
 cd txtgen
-npm install
+npm i
 npm test
 ```
 

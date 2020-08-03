@@ -2,9 +2,28 @@
 kind: pipeline
 name: nodelatest
 
+clone:
+  depth: 1
+
 steps:
 - name: test
-  image: node:alpine
+  pull: if-not-exists
+  image: node:slim
+  commands:
+  - npm install
+  - npm test
+
+---
+kind: pipeline
+name: node10
+
+clone:
+  depth: 1
+
+steps:
+- name: test
+  pull: if-not-exists
+  image: node:10.14.2-slim
   commands:
   - npm install
   - npm test

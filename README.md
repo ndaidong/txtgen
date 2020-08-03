@@ -2,7 +2,7 @@
 Lightweight util for generating random sentences, paragraphs and articles in English. Inspired by [Sentencer](https://github.com/kylestetz/Sentencer) and [metaphorpsum.com](http://metaphorpsum.com/).
 
 [![NPM](https://badge.fury.io/js/txtgen.svg)](https://badge.fury.io/js/txtgen)
-[![Build Status](https://travis-ci.org/ndaidong/txtgen.svg?branch=master)](https://travis-ci.org/ndaidong/txtgen)
+[![Build Status](https://drone.ctdtmnhnlcndt.com/api/badges/ndaidong/txtgen/status.svg)](https://drone.ctdtmnhnlcndt.com/ndaidong/txtgen)
 [![Coverage Status](https://coveralls.io/repos/github/ndaidong/txtgen/badge.svg?branch=master)](https://coveralls.io/github/ndaidong/txtgen?branch=master)
 
 

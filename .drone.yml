@@ -6,33 +6,29 @@ steps:
 - name: test
   image: node:slim
   commands:
-  - npm i -g coveralls
   - npm i
-  - npm test
-  - cat coverage/lcov.info | coveralls
+  - npm run test -- --reporter=text-lcov > ./lcov.info
 
----
-kind: pipeline
-name: node13
-
-steps:
-- name: test
-  image: node:13-slim
-  commands:
-  - npm i -g coveralls
-  - npm i
-  - npm test
-  - cat coverage/lcov.info | coveralls
+- name: coveralls
+  image: lizheming/drone-coveralls
+  settings:
+    files:
+    - ./lcov.info
 
 ---
 kind: pipeline
 name: node10
 
 steps:
+
 - name: test
   image: node:10.14.2-slim
   commands:
-  - npm i -g coveralls
   - npm i
-  - npm test
-  - cat coverage/lcov.info | coveralls
+  - npm test -- --reporter=text-lcov > ./lcov.info
+
+- name: coveralls
+  image: lizheming/drone-coveralls
+  settings:
+    files:
+    - ./lcov.info

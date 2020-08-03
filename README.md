@@ -21,9 +21,11 @@ Lightweight util for generating random sentences, paragraphs and articles in Eng
 
 - CDN
 
-  - [txtgen.js](https://cdn.rawgit.com/ndaidong/txtgen/master/dist/txtgen.js)
-  - [txtgen.min.js](https://cdn.rawgit.com/ndaidong/txtgen/master/dist/txtgen.min.js)
-  - [txtgen.min.map](https://cdn.rawgit.com/ndaidong/txtgen/master/dist/txtgen.min.map)
+  - [txtgen.js](https://unpkg.com/txtgen/dist/txtgen.js)
+  - [txtgen.min.js](https://unpkg.com/txtgen/dist/txtgen.min.js)
+  - [txtgen.min.map](https://unpkg.com/txtgen/dist/txtgen.min.map)
+
+
 
 - Also supports ES6 Module, CommonJS, AMD and UMD style.
 

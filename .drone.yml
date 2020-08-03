@@ -7,12 +7,4 @@ steps:
   image: node:alpine
   commands:
   - npm install
-  - npm run test:ci -- --reporter=text-lcov > ./lcov.info
-
-- name: coveralls
-  image: lizheming/drone-coveralls
-  settings:
-    token:
-      from_secret: coveralls_token
-    files:
-    - ./lcov.info
+  - npm test

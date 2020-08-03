@@ -13,13 +13,13 @@
   "jsnext:main": "./src/main",
   "browser": "./dist/txtgen.min.js",
   "engines": {
-    "node": ">= 8.6"
+    "node": ">= 10.14.2"
   },
   "scripts": {
     "lint": "eslint src tests/specs",
     "dtslint": "dtslint types",
     "pretest": "npm run lint && npm run build",
-    "test": "tap tests/start.js --coverage --reporter=spec",
+    "test": "tap tests/start.js --coverage --reporter=spec --coverage-report=html --no-browser",
     "build": "gccmin -e src/main.js -n txtgen -o dist -p package.json",
     "reset": "node reset"
   },

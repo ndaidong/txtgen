@@ -8,5 +8,5 @@ git:
 before_script:
   - npm i
 script:
-  - npm test
+  - npm run test:ci -- --reporter=text-lcov > ./lcov.info
   - cat coverage/lcov.info | coveralls

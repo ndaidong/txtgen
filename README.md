@@ -15,8 +15,8 @@ Lightweight util for generating random sentences, paragraphs and articles in Eng
 
 - Node.js
 
-  ```
-  npm install txtgen
+  ```bash
+  npm i txtgen
   ```
 
 - CDN
@@ -104,10 +104,10 @@ Here are the available placeholders:
 
 ## Test
 
-```js
+```bash
 git clone https://github.com/ndaidong/txtgen.git
 cd txtgen
-npm install
+npm i
 npm test
 ```
 

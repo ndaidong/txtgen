@@ -4,31 +4,15 @@ name: nodelatest
 
 steps:
 - name: test
-  image: node:slim
+  image: node:alpine
   commands:
-  - npm i
-  - npm run test -- --reporter=text-lcov > ./lcov.info
+  - npm install
+  - npm run test:ci -- --reporter=text-lcov > ./lcov.info
 
 - name: coveralls
   image: lizheming/drone-coveralls
   settings:
-    files:
-    - ./lcov.info
-
----
-kind: pipeline
-name: node10
-
-steps:
-
-- name: test
-  image: node:10.14.2-slim
-  commands:
-  - npm i
-  - npm test -- --reporter=text-lcov > ./lcov.info
-
-- name: coveralls
-  image: lizheming/drone-coveralls
-  settings:
+    token:
+      from_secret: coveralls_token
     files:
     - ./lcov.info

@@ -142,4 +142,3 @@ const checkAllVariants = (txtgen) => {
 };
 
 variants.map(checkAllVariants);
-

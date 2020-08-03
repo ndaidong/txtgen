@@ -17,6 +17,7 @@
   },
   "scripts": {
     "lint": "eslint src tests/specs",
+    "dtslint": "dtslint types",
     "pretest": "npm run lint && npm run build",
     "test": "tap tests/start.js --coverage --reporter=spec",
     "build": "gccmin -e src/main.js -n txtgen -o dist -p package.json",
@@ -38,5 +39,10 @@
     "language",
     "util"
   ],
-  "license": "MIT"
+  "types": "./types",
+  "license": "MIT",
+  "dependencies": {
+    "dtslint": "^3.6.14",
+    "typescript": "^3.9.7"
+  }
 }

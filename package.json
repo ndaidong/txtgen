@@ -20,6 +20,7 @@
     "dtslint": "dtslint types",
     "pretest": "npm run lint && npm run build",
     "test": "tap tests/start.js --coverage --reporter=spec --coverage-report=html --no-browser",
+    "citest": "tap tests/start.js --coverage --reporter=spec --coverage-report=lcov --no-browser",
     "build": "gccmin -e src/main.js -n txtgen -o dist -p package.json",
     "reset": "node reset"
   },

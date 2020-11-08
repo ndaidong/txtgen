@@ -27,7 +27,7 @@ jobs:
         npm install
         npm run lint
         npm run build --if-present
-        npm run test
+        npm run citest
 
     - name: sync to coveralls
       uses: coverallsapp/github-action@v1.1.2

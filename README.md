@@ -107,7 +107,7 @@ Here are the available placeholders:
 ```bash
 git clone https://github.com/ndaidong/txtgen.git
 cd txtgen
-npm i
+npm install
 npm test
 ```
 

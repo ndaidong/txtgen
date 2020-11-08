@@ -1,6 +1,6 @@
 /**
- * txtgen@2.2.7
- * built on: Mon, 03 Aug 2020 14:59:55 GMT
+ * txtgen@2.2.8
+ * built on: Sun, 08 Nov 2020 08:54:01 GMT
  * repository: https://github.com/ndaidong/txtgen
  * maintainer: @ndaidong
  * License: MIT

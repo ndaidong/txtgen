@@ -1,5 +1,5 @@
 {
-  "version": "2.2.7",
+  "version": "2.2.8",
   "name": "txtgen",
   "description": "Util for generating random sentences, paragraphs and articles in English",
   "homepage": "http://ndaidong.github.io/txtgen",
@@ -24,12 +24,12 @@
     "reset": "node reset"
   },
   "devDependencies": {
-    "bellajs": "^9.2.0",
-    "dtslint": "^3.6.14",
+    "bellajs": "^9.2.1",
+    "dtslint": "^4.0.5",
     "eslint-config-goes": "^1.1.8",
     "gcc-min": "^7.2.0",
     "tap": "^14.10.8",
-    "typescript": "^3.9.7"
+    "typescript": "^4.0.5"
   },
   "keywords": [
     "text",

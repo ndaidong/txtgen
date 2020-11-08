@@ -2,8 +2,9 @@
 Lightweight util for generating random sentences, paragraphs and articles in English. Inspired by [Sentencer](https://github.com/kylestetz/Sentencer) and [metaphorpsum.com](http://metaphorpsum.com/).
 
 [![NPM](https://badge.fury.io/js/txtgen.svg)](https://badge.fury.io/js/txtgen)
-[![Build Status](https://drone.ctdtmnhnlcndt.com/api/badges/ndaidong/txtgen/status.svg)](https://drone.ctdtmnhnlcndt.com/ndaidong/txtgen)
-[![Coverage Status](https://coveralls.io/repos/github/ndaidong/txtgen/badge.svg?branch=master)](https://coveralls.io/github/ndaidong/txtgen?branch=master)
+[![CI test](https://github.com/ndaidong/txtgen/workflows/ci-test/badge.svg)](https://github.com/ndaidong/txtgen/actions)
+[![Coverage Status](https://coveralls.io/repos/github/ndaidong/txtgen/badge.svg)](https://coveralls.io/github/ndaidong/txtgen)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ndaidong_txtgen&metric=alert_status)](https://sonarcloud.io/dashboard?id=ndaidong_txtgen)
 
 
 # Demo
@@ -24,7 +25,6 @@ Lightweight util for generating random sentences, paragraphs and articles in Eng
   - [txtgen.js](https://unpkg.com/txtgen/dist/txtgen.js)
   - [txtgen.min.js](https://unpkg.com/txtgen/dist/txtgen.min.js)
   - [txtgen.min.map](https://unpkg.com/txtgen/dist/txtgen.min.map)
-
 
 
 - Also supports ES6 Module, CommonJS, AMD and UMD style.

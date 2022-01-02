@@ -29,7 +29,7 @@ Lightweight util for generating random sentences, paragraphs and articles in Eng
 
 - CDN
 
-  - ES6 Module: [txtgen.esm.js](https://unpkg.com/bellajs/dist/bella.esm.js)
+  - ES6 Module: [txtgen.esm.js](https://unpkg.com/txtgen/dist/txtgen.esm.js)
   - CommonJS: [txtgen.js](https://unpkg.com/txtgen/dist/cjs/txtgen.js)
   - For old browsers: [txtgen.min.js](https://unpkg.com/txtgen/dist/txtgen.min.js)
 

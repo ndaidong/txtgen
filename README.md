@@ -5,6 +5,7 @@ Lightweight util for generating random sentences, paragraphs and articles in Eng
 [![CI test](https://github.com/ndaidong/txtgen/workflows/ci-test/badge.svg)](https://github.com/ndaidong/txtgen/actions)
 [![Coverage Status](https://coveralls.io/repos/github/ndaidong/txtgen/badge.svg)](https://coveralls.io/github/ndaidong/txtgen)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ndaidong_txtgen&metric=alert_status)](https://sonarcloud.io/dashboard?id=ndaidong_txtgen)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 
 # Demo
@@ -18,31 +19,61 @@ Lightweight util for generating random sentences, paragraphs and articles in Eng
 
   ```bash
   npm i txtgen
+
+  # pnpm
+  pnpm i txtgen
+
+  # yarn
+  yarn add txtgen
   ```
 
 - CDN
 
-  - [txtgen.js](https://unpkg.com/txtgen/dist/txtgen.js)
-  - [txtgen.min.js](https://unpkg.com/txtgen/dist/txtgen.min.js)
-  - [txtgen.min.map](https://unpkg.com/txtgen/dist/txtgen.min.map)
+  - ES6 Module: [txtgen.esm.js](https://unpkg.com/bellajs/dist/bella.esm.js)
+  - CommonJS: [txtgen.js](https://unpkg.com/txtgen/dist/cjs/txtgen.js)
+  - For old browsers: [txtgen.min.js](https://unpkg.com/txtgen/dist/txtgen.min.js)
 
 
-- Also supports ES6 Module, CommonJS, AMD and UMD style.
+## Usage
 
+### Node.js:
 
-### Usage
+Sync v14, ECMAScript modules [have became the official standard format](https://nodejs.org/docs/latest-v14.x/api/esm.html#esm_modules_ecmascript_modules).
+
+Just [enable](https://nodejs.org/api/packages.html#determining-module-system) and enjoy with ES6 import/export syntax.
+
 
 ```js
-const txtgen = require('txtgen');
+import { sentence } from 'txtgen'
+console.log(sentence())
+```
 
-const sentence = txtgen.sentence();
-console.log(sentence);
+For regular CommonJS environment, `require` can be used as below:
 
-const paragraph = txtgen.paragraph();
-console.log(paragraph);
+```js
+const txtgen = require('txtgen/dist/cjs/txtgen.js')
+console.log(txtgen.sentence())
+```
 
-const article = txtgen.article();
-console.log(article);
+### Browsers:
+
+Currently ECMAScript modules work fine on almost browsers:
+
+```html
+<script type="module">
+import { sentence } from 'https://unpkg.com/txtgen/dist/txtgen.esm.js'
+console.log(sentence())
+</script>
+```
+
+With outdated browsers, we can use traditional way:
+
+```html
+<script type="text/javascript" src="https://unpkg.com/txtgen/dist/txtgen.min.js"></script>
+
+<script>
+console.log(window.txtgen.sentence())
+</script>
 ```
 
 ## APIs
@@ -83,14 +114,14 @@ For example:
 ```js
 import {
   addTemplates
-} from 'txtgen';
+} from 'txtgen'
 
-let templates = [
+const templates = [
   '{{a_noun}} is {{a_noun}} from the right perspective',
   'the {{noun}} of {{a_noun}} becomes {{an_adjective}} {{noun}}'
-];
+]
 
-addTemplates(templates);
+addTemplates(templates)
 ```
 
 Here are the available placeholders:

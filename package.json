@@ -1,5 +1,5 @@
 {
-  "version": "2.2.8",
+  "version": "3.0.0rc1",
   "name": "txtgen",
   "description": "Util for generating random sentences, paragraphs and articles in English",
   "homepage": "http://ndaidong.github.io/txtgen",
@@ -9,28 +9,38 @@
   },
   "author": "@ndaidong",
   "main": "./dist/txtgen.js",
-  "module": "./src/main",
-  "jsnext:main": "./src/main",
+  "module": "./src/main.js",
   "browser": "./dist/txtgen.min.js",
+  "type": "module",
   "engines": {
-    "node": ">= 10.14.2"
+    "node": ">= 14"
   },
   "scripts": {
-    "lint": "eslint src tests/specs",
     "dtslint": "dtslint types",
-    "pretest": "npm run lint && npm run build",
-    "test": "tap tests/start.js --coverage --reporter=spec --coverage-report=html --no-browser",
-    "citest": "tap tests/start.js --coverage --reporter=spec --coverage-report=lcov --no-browser",
-    "build": "gccmin -e src/main.js -n txtgen -o dist -p package.json",
+    "lint": "standard ./src",
+    "pretest": "npm run lint",
+    "test": "NODE_ENV=test jest --verbose --coverage=true --unhandled-rejections=strict --detectOpenHandles --env=jsdom",
+    "build": "node build.js src/main.js",
     "reset": "node reset"
   },
+  "babel": {
+    "env": {
+      "test": {
+        "plugins": [
+          "@babel/plugin-transform-modules-commonjs"
+        ]
+      }
+    }
+  },
+  "jest": {
+      "testPathIgnorePatterns": ["dist", "types", "tests"]
+    },
   "devDependencies": {
-    "bellajs": "^9.2.1",
     "dtslint": "^4.0.5",
-    "eslint-config-goes": "^1.1.8",
-    "gcc-min": "^7.2.0",
-    "tap": "^14.10.8",
-    "typescript": "^4.0.5"
+    "typescript": "^4.0.5",
+    "@babel/plugin-transform-modules-commonjs": "^7.16.7",
+    "esbuild": "^0.14.10",
+    "jest": "^27.3.1"
   },
   "keywords": [
     "text",

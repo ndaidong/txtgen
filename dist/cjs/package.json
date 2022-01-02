@@ -1,0 +1,5 @@
+{
+  "name": "txtgen-cjs",
+  "version": "3.0.0rc1",
+  "main": "./txtgen.js"
+}

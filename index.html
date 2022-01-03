@@ -20,9 +20,9 @@
 
     <section class="main-content">
       <h3>How does it work?</h3>
-      <form name="noop">
+      <form name="genform" id="genform">
         <p>
-          <button class="btn act-btn" id="btnGenerate">Generate</button>
+          <button type="submit" class="btn act-btn">Generate</button>
           <br>
           <label class="opt-typ"><input type="radio" name="typ" value="sentence" checked> Sentence</label>
           <label class="opt-typ"><input type="radio" name="typ" value="paragraph"> Paragraph</label>
@@ -39,20 +39,20 @@
       </footer>
 
     </section>
-    <script type="text/javascript" src="https://unpkg.com/txtgen@2.2.8/dist/txtgen.min.js"></script>
-    <script type="text/javascript" src="https://cdn.rawgit.com/ndaidong/realdom/master/dist/realdom.min.js"></script>
-    <script type="text/javascript">
-      realdom.Event.on('btnGenerate', 'click', (e) => {
-        realdom.Event.stop(e);
-        var typ = document.noop.typ.value;
-        var txt = '';
-        switch (typ) {
-          case 'sentence': txt = txtgen.sentence(); break;
-          case 'paragraph': txt = txtgen.paragraph(); break;
-          case 'article': txt = txtgen.article(); break;
-        }
-        realdom.get('result').value = txt;
-      });
+    <script type="module">
+    import { sentence, paragraph, article } from 'https://unpkg.com/txtgen/dist/txtgen.esm.js'
+    const fn = {
+      sentence,
+      paragraph,
+      article
+    }
+    const generate = (e) => {
+      e.preventDefault()
+      const typ = document.genform.typ.value
+      const txt = fn[typ]()
+      document.getElementById('result').value = txt
+    }
+    document.getElementById('genform').onsubmit = generate
     </script>
   </body>
 </html>

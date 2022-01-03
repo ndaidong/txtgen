@@ -1,5 +1,5 @@
 {
-  "version": "3.0.0rc1",
+  "version": "3.0.0",
   "name": "txtgen",
   "description": "Util for generating random sentences, paragraphs and articles in English",
   "homepage": "http://ndaidong.github.io/txtgen",
@@ -8,7 +8,7 @@
     "url": "https://github.com/ndaidong/txtgen"
   },
   "author": "@ndaidong",
-  "main": "./dist/txtgen.js",
+  "main": "./dist/cjs/txtgen.js",
   "module": "./src/main.js",
   "browser": "./dist/txtgen.min.js",
   "type": "module",
@@ -33,8 +33,8 @@
     }
   },
   "jest": {
-      "testPathIgnorePatterns": ["dist", "types", "tests"]
-    },
+    "testPathIgnorePatterns": ["dist", "types", "tests"]
+  },
   "devDependencies": {
     "dtslint": "^4.0.5",
     "typescript": "^4.0.5",

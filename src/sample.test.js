@@ -15,7 +15,7 @@ import {
   getTemplates,
   addTemplates,
   setTemplates
-} from './sample'
+} from './sample.js'
 
 describe('Test nouns/getNouns', () => {
   test('  test if getNouns() return same as pre-defined nouns', () => {

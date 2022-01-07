@@ -8,7 +8,7 @@ import {
   article
 } from './main.js'
 
-const LIMIT = 50
+const LIMIT = 30
 
 describe('Test exported methods', () => {
   test('  test if .sentence() works correctly', () => {

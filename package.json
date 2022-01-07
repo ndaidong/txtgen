@@ -1,5 +1,5 @@
 {
-  "version": "3.0.0",
+  "version": "3.0.1",
   "name": "txtgen",
   "description": "Util for generating random sentences, paragraphs and articles in English",
   "homepage": "http://ndaidong.github.io/txtgen",
@@ -17,10 +17,11 @@
   },
   "scripts": {
     "dtslint": "dtslint types",
-    "lint": "standard ./src",
+    "lint": "standard .",
     "pretest": "npm run lint",
     "test": "NODE_ENV=test jest --verbose --coverage=true --unhandled-rejections=strict --detectOpenHandles --env=jsdom",
     "build": "node build.js src/main.js",
+    "eval": "node eval",
     "reset": "node reset"
   },
   "babel": {
@@ -32,8 +33,13 @@
       }
     }
   },
+  "standard": {
+    "ignore": [
+      "/dist"
+    ]
+  },
   "jest": {
-    "testPathIgnorePatterns": ["dist", "types", "tests"]
+    "testPathIgnorePatterns": ["dist", "types"]
   },
   "devDependencies": {
     "dtslint": "^4.0.5",

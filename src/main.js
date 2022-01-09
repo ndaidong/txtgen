@@ -4,11 +4,9 @@
 **/
 
 import {
-  nouns,
-  adjectives,
   sentenceTemplates,
   phrases
-} from './sample'
+} from './sample.js'
 
 import {
   setRandom,
@@ -16,9 +14,8 @@ import {
   randint,
   rand,
   pickLastPunc,
-  pluralize,
-  normalize
-} from './util'
+  generator
+} from './util.js'
 
 export {
   addNouns,
@@ -30,30 +27,12 @@ export {
   getNouns,
   getAdjectives,
   getTemplates
-} from './sample'
+} from './sample.js'
 
 const actions = [
   'noun', 'a_noun', 'nouns',
   'adjective', 'an_adjective'
 ]
-
-const generator = {
-  noun: () => {
-    return rand(nouns)
-  },
-  a_noun: () => {
-    return normalize(rand(nouns))
-  },
-  nouns: () => {
-    return pluralize(rand(nouns))
-  },
-  adjective: () => {
-    return rand(adjectives)
-  },
-  an_adjective: () => {
-    return normalize(rand(adjectives))
-  }
-}
 
 const trim = (s) => {
   return s.replace(/^[\s\xa0]+|[\s\xa0]+$/g, '')

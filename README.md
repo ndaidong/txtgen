@@ -10,7 +10,7 @@ Lightweight util for generating random sentences, paragraphs and articles in Eng
 
 # Demo
 
-[See how it works?](http://ndaidong.github.io/txtgen/)
+[See how it works?](https://ndaidong.github.io/txtgen/)
 
 
 ## Setup
@@ -38,22 +38,23 @@ Lightweight util for generating random sentences, paragraphs and articles in Eng
 
 ### Node.js:
 
-Sync v14, ECMAScript modules [have became the official standard format](https://nodejs.org/docs/latest-v14.x/api/esm.html#esm_modules_ecmascript_modules).
-
-Just [enable](https://nodejs.org/api/packages.html#determining-module-system) and enjoy with ES6 import/export syntax.
-
-
 ```js
-import { sentence } from 'txtgen'
-console.log(sentence())
+import {
+  sentence
+} from 'txtgen'
+
+// with CommonJS environment
+// const { sentence } = require('txtgen/dist/cjs/txtgen.js')
+
+sentence()
 ```
 
-For regular CommonJS environment, `require` can be used as below:
 
-```js
-const txtgen = require('txtgen/dist/cjs/txtgen.js')
-console.log(txtgen.sentence())
-```
+##### Note:
+
+> Since Node.js v14, ECMAScript modules [have became the official standard format](https://nodejs.org/docs/latest-v14.x/api/esm.html#esm_modules_ecmascript_modules).
+> Just ensure that you are [using module system](https://nodejs.org/api/packages.html#determining-module-system) and enjoy with ES6 import/export syntax.
+
 
 ### Browsers:
 
@@ -126,11 +127,11 @@ addTemplates(templates)
 
 Here are the available placeholders:
 
-- noun
-- nouns
-- a_noun
-- adjective
-- an_adjective
+- `noun`
+- `nouns`
+- `a_noun`
+- `adjective`
+- `an_adjective`
 
 
 ## Test

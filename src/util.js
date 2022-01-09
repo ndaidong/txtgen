@@ -1,8 +1,10 @@
 // utils
 
 import {
-  vowels
-} from './sample'
+  vowels,
+  nouns,
+  adjectives
+} from './sample.js'
 
 let random
 
@@ -48,8 +50,26 @@ export const pluralize = (word) => {
 
 export const normalize = (word) => {
   let a = 'a'
-  if (word.match(/^(a|e|i|o)/)) {
+  if (word.match(/^(a|e|heir|herb|hour|i|o)/)) {
     a = 'an'
   }
   return `${a} ${word}`
+}
+
+export const generator = {
+  noun: () => {
+    return rand(nouns)
+  },
+  a_noun: () => {
+    return normalize(rand(nouns))
+  },
+  nouns: () => {
+    return pluralize(rand(nouns))
+  },
+  adjective: () => {
+    return rand(adjectives)
+  },
+  an_adjective: () => {
+    return normalize(rand(adjectives))
+  }
 }

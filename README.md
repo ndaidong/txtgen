@@ -10,7 +10,7 @@ Lightweight util for generating random sentences, paragraphs and articles in Eng
 
 # Demo
 
-[See how it works?](https://ndaidong.github.io/txtgen/)
+[Want to see how it works?](https://ndaidong.github.io/txtgen/)
 
 
 ## Setup
@@ -58,7 +58,7 @@ sentence()
 
 ### Browsers:
 
-Currently ECMAScript modules work fine on almost browsers:
+Currently, ECMAScript modules work fine on almost all browsers:
 
 ```html
 <script type="module">
@@ -67,7 +67,7 @@ console.log(sentence())
 </script>
 ```
 
-With outdated browsers, we can use traditional way:
+With outdated browsers, we can use the traditional method:
 
 ```html
 <script type="text/javascript" src="https://unpkg.com/txtgen/dist/txtgen.min.js"></script>
@@ -93,7 +93,7 @@ console.log(window.txtgen.sentence())
  - .getTemplates()
 
 
-As their name means, we have 4 groups of methods:
+As their name suggests, we have 4 groups of methods:
 
 - `sentence()`, `paragraph()`, `article()`: generate text by given grammatical unit
 - `addNouns()`, `addAdjectives()`, `addTemplates()`: add more samples to current sample set
@@ -101,13 +101,13 @@ As their name means, we have 4 groups of methods:
 - `getNouns()`, `getAdjectives()`, `getTemplates()`: get current sample set
 
 
-The `set*` and `get*` methods were added since v2.2.3 to help you customize your sample data.
+The `set*` and `get*` methods were added in v2.2.3 to help you customize your sample data.
 
 
 ### Template
 
-If you want to add more kinds of sentence, just use `.addTemplates()` method. It expects a list of sentence templates.
-Each of sentence template is an English sentence, with the placeholders that can be replaced with any alternative word.
+If you want to add more kinds of sentences, just use the `.addTemplates()` method; it expects a list of sentence templates.
+Each sentence template is an English sentence, containing placeholders that can be replaced with any alternative word.
 
 
 For example:

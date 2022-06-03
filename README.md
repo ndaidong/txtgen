@@ -4,7 +4,7 @@ Lightweight util for generating random sentences, paragraphs and articles in Eng
 [![NPM](https://badge.fury.io/js/txtgen.svg)](https://badge.fury.io/js/txtgen)
 [![CI test](https://github.com/ndaidong/txtgen/workflows/ci-test/badge.svg)](https://github.com/ndaidong/txtgen/actions)
 [![Coverage Status](https://coveralls.io/repos/github/ndaidong/txtgen/badge.svg)](https://coveralls.io/github/ndaidong/txtgen)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ndaidong_txtgen&metric=alert_status)](https://sonarcloud.io/dashboard?id=ndaidong_txtgen)
+![CodeQL](https://github.com/ndaidong/txtgen/workflows/CodeQL/badge.svg)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 

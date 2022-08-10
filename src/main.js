@@ -1,7 +1,4 @@
-/**
- * txtgen
- * @ndaidong
-**/
+// main
 
 import {
   sentenceTemplates,

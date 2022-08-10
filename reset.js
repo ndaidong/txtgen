@@ -1,7 +1,5 @@
-/**
- * reset.js
- * @ndaidong
-**/
+// reset.js
+// to clean generated content
 
 import {
   existsSync,

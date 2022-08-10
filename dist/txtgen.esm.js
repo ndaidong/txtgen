@@ -1,6 +1,6 @@
 /**
- * txtgen@3.0.2
- * built with esbuild at: 2022-06-03T08:39:59.112Z
+ * txtgen@3.0.3
+ * built with esbuild at: 2022-08-10T15:41:36.738Z
  * repository: https://github.com/ndaidong/txtgen
  * maintainer: @ndaidong
  * License: MIT

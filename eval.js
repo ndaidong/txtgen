@@ -1,7 +1,23 @@
 // eval.js
+// for human test
 
 import {
-  sentence
+  sentence,
+  paragraph,
+  article
 } from './src/main.js'
 
-console.log('sentence() // => ', sentence())
+console.log('Generate sentence ')
+console.log('-'.repeat(100))
+console.log(sentence())
+console.log('-'.repeat(100))
+
+console.log('Generate paragraph ')
+console.log('+'.repeat(100))
+console.log(paragraph())
+console.log('+'.repeat(100))
+
+console.log('Generate article ')
+console.log('*'.repeat(100))
+console.log(article())
+console.log('*'.repeat(100))

@@ -11,15 +11,6 @@ execSync('rm -rf dist')
 execSync('mkdir dist')
 
 const buildTime = (new Date()).toISOString()
-const longComment = [
-  '/**',
-  ` * ${pkg.name}@${pkg.version}`,
-  ` * built with esbuild at: ${buildTime}`,
-  ` * repository: ${pkg.repository.url}`,
-  ` * maintainer: ${pkg.author}`,
-  ` * License: ${pkg.license}`,
-  '**/'
-].join('\n')
 
 const shortComment = [
   `// ${pkg.name}@${pkg.version}, by ${pkg.author}`,
@@ -43,7 +34,7 @@ const esmVersion = {
   mainFields: ['module'],
   outfile: `dist/${pkg.name}.esm.js`,
   banner: {
-    js: longComment
+    js: shortComment
   }
 }
 buildSync(esmVersion)
@@ -55,7 +46,7 @@ const cjsVersion = {
   mainFields: ['main'],
   outfile: `dist/cjs/${pkg.name}.js`,
   banner: {
-    js: longComment
+    js: shortComment
   }
 }
 buildSync(cjsVersion)

@@ -7,11 +7,12 @@ Lightweight util for generating random sentences, paragraphs and articles in Eng
 ![CodeQL](https://github.com/ndaidong/txtgen/workflows/CodeQL/badge.svg)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+[![Deploy](https://button.deta.dev/1/svg)](https://go.deta.dev/deploy?repo=https://github.com/ndaidong/txtgen-deta)
 
 # Demo
 
-[Want to see how it works?](https://ndaidong.github.io/txtgen/)
-
+- [Want to see how it works?](https://ndaidong.github.io/txtgen/)
+- [Deta service to generate text](https://txtgen.deta.dev/)
 
 ## Setup
 

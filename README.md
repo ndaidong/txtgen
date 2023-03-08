@@ -5,14 +5,10 @@ Lightweight util for generating random sentences, paragraphs and articles in Eng
 [![CI test](https://github.com/ndaidong/txtgen/workflows/ci-test/badge.svg)](https://github.com/ndaidong/txtgen/actions)
 [![Coverage Status](https://coveralls.io/repos/github/ndaidong/txtgen/badge.svg)](https://coveralls.io/github/ndaidong/txtgen)
 ![CodeQL](https://github.com/ndaidong/txtgen/workflows/CodeQL/badge.svg)
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-
-[![Deploy](https://button.deta.dev/1/svg)](https://go.deta.dev/deploy?repo=https://github.com/ndaidong/txtgen-deta)
 
 # Demo
 
 - [Want to see how it works?](https://ndaidong.github.io/txtgen/)
-- [Deta service to generate text](https://txtgen.deta.dev/)
 
 ## Setup
 
@@ -85,6 +81,7 @@ console.log(window.txtgen.sentence())
  - `.getNouns()`
  - `.getAdjectives()`
  - `.getTemplates()`
+ - `.lorem([Number min [, Number max]])`
 
 
 As their name suggests, we have 4 groups of methods:
@@ -97,12 +94,12 @@ As their name suggests, we have 4 groups of methods:
 
 The `set*` and `get*` methods were added in v2.2.3 to help you customize your sample data.
 
+In addition, we've added `lorem()` method since v3.0.5 to generate lorem ipsum text.
 
 ### Template
 
 If you want to add more kinds of sentences, just use the `.addTemplates()` method; it expects a list of sentence templates.
 Each sentence template is an English sentence, containing placeholders that can be replaced with any alternative word.
-
 
 For example:
 
@@ -127,6 +124,25 @@ Here are the available placeholders:
 - `adjective`
 - `an_adjective`
 
+
+### Lorem ipsum
+
+Syntax:
+
+```js
+lorem() // generate a random phrase with length from 2 to 24 words of lorem ipsum
+lorem(Number min) // set the minimum number of words
+lorem(Number min, Number max)// set the minimum/maximum number of words
+```
+
+Example:
+
+```js
+import { lorem } from 'txtgen'
+
+const phrase = lorem()
+console.log(phrase) // => nisi blandit feugiat tempus imperdiet etiam eu mus augue
+```
 
 ## Test
 

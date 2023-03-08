@@ -5,7 +5,8 @@
 import {
   sentence,
   paragraph,
-  article
+  article,
+  lorem
 } from './main.js'
 
 const LIMIT = 30
@@ -33,6 +34,15 @@ describe('Test exported methods', () => {
 
       const art = article()
       expect(art.split('\n\n').length).toBeGreaterThan(2)
+    }
+  })
+})
+
+describe('Test lorem generation', () => {
+  test('  test if lorem() works correctly', () => {
+    for (let i = 0; i < LIMIT; i++) {
+      const val = lorem(4, 10)
+      expect(val.split(' ').length).toBeGreaterThan(3)
     }
   })
 })

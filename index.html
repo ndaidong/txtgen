@@ -27,6 +27,7 @@
           <label class="opt-typ"><input type="radio" name="typ" value="sentence" checked> Sentence</label>
           <label class="opt-typ"><input type="radio" name="typ" value="paragraph"> Paragraph</label>
           <label class="opt-typ"><input type="radio" name="typ" value="article"> Article</label>
+          <label class="opt-typ"><input type="radio" name="typ" value="lorem"> Lorem Ipsum</label>
         </p>
         <p>
           <textarea class="result-area" id="result"></textarea>
@@ -40,11 +41,12 @@
 
     </section>
     <script type="module">
-    import { sentence, paragraph, article } from 'https://unpkg.com/txtgen/dist/txtgen.esm.js'
+    import { sentence, paragraph, article, lorem } from 'https://unpkg.com/txtgen/dist/txtgen.esm.js'
     const fn = {
       sentence,
       paragraph,
-      article
+      article,
+      lorem
     }
     const generate = (e) => {
       e.preventDefault()

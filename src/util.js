@@ -71,5 +71,5 @@ export const generator = {
   },
   an_adjective: () => {
     return normalize(rand(adjectives))
-  }
+  },
 }

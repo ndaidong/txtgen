@@ -4,7 +4,8 @@
 import {
   sentence,
   paragraph,
-  article
+  article,
+  lorem
 } from './src/main.js'
 
 console.log('Generate sentence ')
@@ -21,3 +22,8 @@ console.log('Generate article ')
 console.log('*'.repeat(100))
 console.log(article())
 console.log('*'.repeat(100))
+
+console.log('Generate lorem sentence ')
+console.log('-'.repeat(100))
+console.log(lorem())
+console.log('-'.repeat(100))

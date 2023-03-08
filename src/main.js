@@ -15,6 +15,10 @@ import {
 } from './util.js'
 
 export {
+  generate as lorem
+} from './lorem.js'
+
+export {
   addNouns,
   addAdjectives,
   addTemplates,
@@ -28,7 +32,7 @@ export {
 
 const actions = [
   'noun', 'a_noun', 'nouns',
-  'adjective', 'an_adjective'
+  'adjective', 'an_adjective',
 ]
 
 const trim = (s) => {

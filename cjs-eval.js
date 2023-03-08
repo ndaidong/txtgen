@@ -2,7 +2,7 @@
 // remove type=`module` from package.json first
 
 const {
-  sentence
+  sentence,
 } = require('./dist/cjs/txtgen.js')
 
 console.log('sentence() // => ', sentence())

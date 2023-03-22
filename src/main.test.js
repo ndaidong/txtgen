@@ -18,6 +18,12 @@ describe('Test exported methods', () => {
       expect(val.split(' ').length).toBeGreaterThan(3)
     }
   })
+  test('  test if .sentence() works correctly with ignoreStartingPhrase flag', () => {
+    for (let i = 0; i < LIMIT; i++) {
+      const val = sentence(true)
+      expect(val.split(' ').length).toBeGreaterThan(3)
+    }
+  })
   test('  test if .paragraph() works correctly', () => {
     for (let i = 0; i < LIMIT; i++) {
       const val = paragraph(5)

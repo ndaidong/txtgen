@@ -73,8 +73,8 @@ export {
   setRandom
 }
 
-export const sentence = () => {
-  const phrase = randomStartingPhrase()
+export const sentence = (ignoreStartingPhrase = false) => {
+  const phrase = ignoreStartingPhrase ? '' : randomStartingPhrase()
   let s = phrase + makeSentenceFromTemplate()
   s = s.charAt(0).toUpperCase() + s.slice(1)
   s += pickLastPunc()

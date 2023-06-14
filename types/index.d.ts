@@ -13,3 +13,5 @@ export function setTemplates(ls?: string[]): number;
 export function getNouns(): string[];
 export function getAdjectives(): string[];
 export function getTemplates(): string[];
+
+export function lorem(min?: number, max?: number): string;

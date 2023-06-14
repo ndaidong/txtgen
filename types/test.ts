@@ -23,3 +23,5 @@ txtgen.setTemplates(['tml1', 'tml2']); // $ExpectType number
 txtgen.getNouns(); // $ExpectType string[]
 txtgen.getAdjectives(); // $ExpectType string[]
 txtgen.getTemplates(); // $ExpectType string[]
+
+txtgen.lorem(1); // $ExpectType string

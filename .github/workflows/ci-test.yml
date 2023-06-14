@@ -8,11 +8,11 @@ on: [push, pull_request]
 jobs:
   test:
 
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node_version: [14.x, 16.x, 18.x, 19.x]
+        node_version: [14.x, 16.x, 18.x, 20.x]
 
     steps:
     - uses: actions/checkout@v2
@@ -24,9 +24,8 @@ jobs:
 
     - name: run npm scripts
       run: |
-        npm i -g standard
         npm install
-        npm run test
+        npm test
 
     - name: sync to coveralls
       uses: coverallsapp/github-action@v1.1.2

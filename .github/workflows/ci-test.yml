@@ -16,14 +16,21 @@ jobs:
 
     steps:
       - name: Git Checkout Deno Module
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Use Deno Version ${{ matrix.deno-version }}
-        uses: denolib/setup-deno@v2
+        uses: denoland/setup-deno@v1
         with:
           deno-version: ${{ matrix.deno-version }}
-      - name: Lint Deno Module
+      - name: lint & test
         run: deno fmt --check
-      - name: Build Deno Module
-        run: deno run --reload mod.ts
-      - name: Test Deno Module
-        run: deno test --allow-none
+        run: deno lint
+        run: deno test --allow-all --coverage=cov/
+
+      - name: Generate coverage report
+        run: deno coverage --lcov cov > cov.lcov
+
+      - name: Upload coverage to Coveralls.io
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path-to-lcov: cov.lcov

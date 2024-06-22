@@ -21,9 +21,11 @@ jobs:
         uses: denoland/setup-deno@v1
         with:
           deno-version: ${{ matrix.deno-version }}
-      - name: lint & test
+      - name: format check
         run: deno fmt --check
+      - name: run linter
         run: deno lint
+      - name: run test
         run: deno test --allow-all --coverage=cov/
 
       - name: Generate coverage report

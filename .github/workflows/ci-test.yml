@@ -16,7 +16,7 @@ jobs:
 
     steps:
       - name: Git Checkout Deno Module
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Use Deno Version ${{ matrix.deno-version }}
         uses: denoland/setup-deno@v1
         with:
@@ -32,7 +32,7 @@ jobs:
         run: deno coverage --lcov cov > cov.lcov
 
       - name: Upload coverage to Coveralls.io
-        uses: coverallsapp/github-action@master
+        uses: coverallsapp/github-action@2
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           path-to-lcov: cov.lcov

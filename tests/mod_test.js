@@ -1,7 +1,4 @@
-import {
-  assertEquals,
-  assertGreaterOrEqual,
-} from "https://deno.land/std@0.224.0/assert/mod.ts";
+import { assertEquals, assertGreaterOrEqual } from "assert";
 
 import { article, lorem, paragraph, sentence } from "../mod.ts";
 

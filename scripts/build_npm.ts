@@ -8,6 +8,7 @@ const outputDir = "./npm";
 await emptyDir(outputDir);
 
 await build({
+  importMap: "deno.json",
   entryPoints: ["./mod.ts"],
   outDir: outputDir,
   shims: {

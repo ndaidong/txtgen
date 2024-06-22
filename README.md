@@ -6,7 +6,6 @@ English. Inspired by [Sentencer](https://github.com/kylestetz/Sentencer) and
 
 [![NPM](https://badge.fury.io/js/txtgen.svg)](https://badge.fury.io/js/txtgen)
 [![CI test](https://github.com/ndaidong/txtgen/workflows/ci-test/badge.svg)](https://github.com/ndaidong/txtgen/actions)
-[![Coverage Status](https://coveralls.io/repos/github/ndaidong/txtgen/badge.svg)](https://coveralls.io/github/ndaidong/txtgen)
 ![CodeQL](https://github.com/ndaidong/txtgen/workflows/CodeQL/badge.svg)
 
 # Demo

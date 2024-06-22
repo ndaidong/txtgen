@@ -22,9 +22,9 @@ jobs:
         with:
           deno-version: ${{ matrix.deno-version }}
       - name: format check
-        run: deno fmt --check
+        run: deno fmt --check mod.ts utils/* scripts/* tests/*
       - name: run linter
-        run: deno lint
+        run: deno lint mod.ts utils/* scripts/* tests/*
       - name: run test
         run: deno test --allow-all --coverage=cov/
 

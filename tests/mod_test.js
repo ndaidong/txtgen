@@ -1,4 +1,4 @@
-import { assertEquals, assertGreaterOrEqual } from "assert";
+import { assertGreaterOrEqual } from "assert";
 
 import { article, lorem, paragraph, sentence } from "../mod.ts";
 

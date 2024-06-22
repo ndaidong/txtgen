@@ -49,7 +49,7 @@ const make = (template: string): string => {
   if (occurrences && occurrences.length) {
     for (let i = 0; i < occurrences.length; i++) {
       const action = trim(occurrences[i].replace("{{", "").replace("}}", ""));
-      let result = actions.includes(action) ? runGenerator(action) : "";
+      const result = actions.includes(action) ? runGenerator(action) : "";
       sentence = sentence.replace(occurrences[i], result);
     }
   }

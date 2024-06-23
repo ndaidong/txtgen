@@ -32,8 +32,7 @@ for (let i = 0; i < 5; i++) {
 }
 ```
 
-In Deno, you can optionally use JSR packages without an install step using
-`jsr:` specifiers:
+You can use JSR packages without an install step using `jsr:` specifiers:
 
 ```ts
 import { sentence } from "jsr:@ndaidong/txtgen";
@@ -43,7 +42,7 @@ for (let i = 0; i < 5; i++) {
 }
 ```
 
-You can still use `npm:` specifiers as before:
+You can also use `npm:` specifiers as before:
 
 ```ts
 import { sentence } from "npm:@ndaidong/txtgen";
@@ -97,7 +96,8 @@ for (let i = 0; i < 5; i++) {
 
 ```html
 <script type="module">
-import { sentence } from 'https://unpkg.com/@ndaidong/txtgen/esm/mod.js';
+import { sentence } from "https://esm.sh/@ndaidong/txtgen";
+// import { sentence } from 'https://unpkg.com/@ndaidong/txtgen/esm/mod.js';
 
 for (let i = 0; i < 5; i++) {
   console.log(sentence());
@@ -147,7 +147,7 @@ alternative word.
 For example:
 
 ```js
-import { addTemplates } from "txtgen";
+import { addTemplates } from "@ndaidong/txtgen";
 
 const templates = [
   "{{a_noun}} is {{a_noun}} from the right perspective",
@@ -178,7 +178,7 @@ lorem(Number min, Number max)// set the minimum/maximum number of words
 Example:
 
 ```js
-import { lorem } from "txtgen";
+import { lorem } from "@ndaidong/txtgen";
 
 const phrase = lorem();
 console.log(phrase); // => nisi blandit feugiat tempus imperdiet etiam eu mus augue

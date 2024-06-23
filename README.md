@@ -39,31 +39,31 @@ sentence();
 You can still use `npm:` specifiers as before:
 
 ```ts
-import { sentence } from 'npm:txtgen';
+import { sentence } from 'npm:@ndaidong/txtgen';
 sentence();
 ```
 
 Or import from esm.sh
 
 ```ts
-import { sentence } from 'https://esm.sh/txtgen';
+import { sentence } from 'https://esm.sh/@ndaidong/txtgen';
 sentence();
 ```
 
 ### Node.js & Bun
 
 ```bash
-npm i txtgen
+npm i @ndaidong/txtgen
 # pnpm
-pnpm i txtgen
+pnpm i @ndaidong/txtgen
 # yarn
-yarn add txtgen
+yarn add @ndaidong/txtgen
 # bun
-bun add txtgen
+bun add @ndaidong/txtgen
 ```
 
 ```js
-import { sentence } from 'txtgen';
+import { sentence } from '@ndaidong/txtgen';
 
 // CommonJS environment
 // const { sentence } = require('txtgen');
@@ -75,7 +75,7 @@ sentence();
 
 ```html
 <script type="module">
-import { sentence } from 'https://unpkg.com/txtgen/esm/mod.js'
+import { sentence } from 'https://unpkg.com/@ndaidong/txtgen/esm/mod.js'
 console.log(sentence())
 </script>
 ```

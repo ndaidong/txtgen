@@ -4,10 +4,11 @@ Lightweight util for generating random sentences, paragraphs and articles in
 English. Inspired by [Sentencer](https://github.com/kylestetz/Sentencer) and
 [metaphorpsum.com](http://metaphorpsum.com/).
 
-[![NPM](https://badge.fury.io/js/txtgen.svg)](https://badge.fury.io/js/txtgen)
+![CodeQL](https://github.com/ndaidong/txtgen/workflows/CodeQL/badge.svg)
 [![CI test](https://github.com/ndaidong/txtgen/workflows/ci-test/badge.svg)](https://github.com/ndaidong/txtgen/actions)
 [![Coverage Status](https://coveralls.io/repos/github/ndaidong/txtgen/badge.svg)](https://coveralls.io/github/ndaidong/txtgen)
-![CodeQL](https://github.com/ndaidong/txtgen/workflows/CodeQL/badge.svg)
+[![NPM](https://img.shields.io/npm/v/%40ndaidong%2Ftxtgen?color=32bb24)](https://www.npmjs.com/package/@ndaidong/txtgen)
+[![JSR](https://jsr.io/badges/@ndaidong/txtgen?color=32bb24)](https://jsr.io/@ndaidong/txtgen)
 
 # Demo
 
@@ -16,6 +17,8 @@ English. Inspired by [Sentencer](https://github.com/kylestetz/Sentencer) and
 ## Setup & Usage
 
 ### Deno
+
+https://jsr.io/@ndaidong/txtgen
 
 ```sh
 deno add @ndaidong/txtgen
@@ -63,6 +66,8 @@ for (let i = 0; i < 5; i++) {
 ```
 
 ### Node.js & Bun
+
+https://www.npmjs.com/package/@ndaidong/txtgen
 
 ```bash
 npm i @ndaidong/txtgen

@@ -16,7 +16,7 @@ jobs:
       - run: npx jsr publish
       - uses: denoland/setup-deno@v1
         with:
-          deno-version: 1.x
+          deno-version: latest
       - name: npm build
         run: deno task build
       - uses: actions/setup-node@v4

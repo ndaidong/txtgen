@@ -1,5 +1,5 @@
 {
-  "name": "txtgen",
+  "name": "@ndaidong/txtgen",
   "version": "4.0.0rc1",
   "description": "Util for generating random sentences, paragraphs and articles in English",
   "homepage": "https://github.com/ndaidong/txtgen",

@@ -1,6 +1,6 @@
 {
   "name": "@ndaidong/txtgen",
-  "version": "4.0.0-rc1",
+  "version": "4.0.0-rc2",
   "description": "Util for generating random sentences, paragraphs and articles in English",
   "homepage": "https://github.com/ndaidong/txtgen",
   "repository": {
@@ -10,7 +10,6 @@
   "author": "@ndaidong",
   "license": "MIT",
   "tasks": {
-    "watch": "deno run --watch mod.ts",
     "build": "deno run -A ./scripts/build_npm.ts"
   },
   "imports": {

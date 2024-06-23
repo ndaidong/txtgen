@@ -25,29 +25,42 @@ npx jsr add @ndaidong/txtgen
 ```
 
 ```ts
-import { sentence } from '@ndaidong/txtgen';
-sentence();
+import { sentence } from "@ndaidong/txtgen";
+
+for (let i = 0; i < 5; i++) {
+  console.log(sentence());
+}
 ```
 
-In Deno, you can optionally use JSR packages without an install step using `jsr:` specifiers:
+In Deno, you can optionally use JSR packages without an install step using
+`jsr:` specifiers:
 
 ```ts
-import { sentence } from 'jsr:@ndaidong/txtgen';
-sentence();
+import { sentence } from "jsr:@ndaidong/txtgen";
+
+for (let i = 0; i < 5; i++) {
+  console.log(sentence());
+}
 ```
 
 You can still use `npm:` specifiers as before:
 
 ```ts
-import { sentence } from 'npm:@ndaidong/txtgen';
-sentence();
+import { sentence } from "npm:@ndaidong/txtgen";
+
+for (let i = 0; i < 5; i++) {
+  console.log(sentence());
+}
 ```
 
 Or import from esm.sh
 
 ```ts
-import { sentence } from 'https://esm.sh/@ndaidong/txtgen';
-sentence();
+import { sentence } from "https://esm.sh/@ndaidong/txtgen";
+
+for (let i = 0; i < 5; i++) {
+  console.log(sentence());
+}
 ```
 
 ### Node.js & Bun
@@ -63,20 +76,32 @@ bun add @ndaidong/txtgen
 ```
 
 ```js
-import { sentence } from '@ndaidong/txtgen';
+import { sentence } from "@ndaidong/txtgen";
 
-// CommonJS environment
-// const { sentence } = require('txtgen');
+for (let i = 0; i < 5; i++) {
+  console.log(sentence());
+}
+```
 
-sentence();
+You can also use CJS style:
+
+```js
+const { sentence } = require("@ndaidong/txtgen");
+
+for (let i = 0; i < 5; i++) {
+  console.log(sentence());
+}
 ```
 
 ### Browsers:
 
 ```html
 <script type="module">
-import { sentence } from 'https://unpkg.com/@ndaidong/txtgen/esm/mod.js'
-console.log(sentence())
+import { sentence } from 'https://unpkg.com/@ndaidong/txtgen/esm/mod.js';
+
+for (let i = 0; i < 5; i++) {
+  console.log(sentence());
+}
 </script>
 ```
 
@@ -161,7 +186,9 @@ console.log(phrase); // => nisi blandit feugiat tempus imperdiet etiam eu mus au
 
 ## Development
 
-Since v4.x.x, we switched to [Deno](https://docs.deno.com/runtime/manual/) platform, and use [DNT](https://github.com/denoland/dnt) to build Node.js packages.
+Since v4.x.x, we switched to [Deno](https://docs.deno.com/runtime/manual/)
+platform, and use [DNT](https://github.com/denoland/dnt) to build Node.js
+packages.
 
 ```bash
 git clone https://github.com/ndaidong/txtgen.git

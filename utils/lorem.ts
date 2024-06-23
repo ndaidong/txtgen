@@ -8,6 +8,14 @@ const WordDict =
 
 const WordDictSize = WordDict.length;
 
+/**
+ * Generate a lorem ipsum
+ *
+ * @param min Minimal words count, default 2
+ * @param max Maximum words count, default 24
+ * @returns A sentence
+ */
+
 export const generate = (min: number = 2, max: number = 24): string => {
   const size: number = randint(min, max);
   const words: string[] = [];

@@ -17,6 +17,7 @@
     "assert": "https://deno.land/std@0.224.0/assert/mod.ts",
     "@deno/dnt": "jsr:@deno/dnt@^0.41.2"
   },
+  "exports": "./mod.ts",
   "test": {
     "include": ["tests"],
     "exclude": []

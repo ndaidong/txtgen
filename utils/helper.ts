@@ -2,8 +2,6 @@
 
 import { adjectives, nouns, vowels } from "./sample.ts";
 
-const crypto = globalThis.crypto;
-
 export const randint = (min: number = 0, max: number = 1e6): number => {
   const byteArray = new Uint8Array(1);
   crypto.getRandomValues(byteArray);

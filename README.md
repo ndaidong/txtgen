@@ -6,64 +6,77 @@ English. Inspired by [Sentencer](https://github.com/kylestetz/Sentencer) and
 
 [![NPM](https://badge.fury.io/js/txtgen.svg)](https://badge.fury.io/js/txtgen)
 [![CI test](https://github.com/ndaidong/txtgen/workflows/ci-test/badge.svg)](https://github.com/ndaidong/txtgen/actions)
+[![Coverage Status](https://coveralls.io/repos/github/ndaidong/txtgen/badge.svg)](https://coveralls.io/github/ndaidong/txtgen)
 ![CodeQL](https://github.com/ndaidong/txtgen/workflows/CodeQL/badge.svg)
 
 # Demo
 
 - [Want to see how it works?](https://ndaidong.github.io/txtgen/)
 
-## Setup
+## Setup & Usage
 
-- Node.js
+### Deno
 
-  ```bash
-  npm i txtgen
+```sh
+deno add @ndaidong/txtgen
 
-  # pnpm
-  pnpm i txtgen
+# npm (use any of npx, yarn dlx, pnpm dlx, or bunx)
+npx jsr add @ndaidong/txtgen
+```
 
-  # yarn
-  yarn add txtgen
-  ```
+```ts
+import { sentence } from '@ndaidong/txtgen';
+sentence();
+```
 
-- CDN
+In Deno, you can optionally use JSR packages without an install step using `jsr:` specifiers:
 
-  - ES6 Module: [txtgen.esm.js](https://unpkg.com/txtgen/dist/txtgen.esm.js)
-  - CommonJS: [txtgen.js](https://unpkg.com/txtgen/dist/cjs/txtgen.js)
-  - For old browsers:
-    [txtgen.min.js](https://unpkg.com/txtgen/dist/txtgen.min.js)
+```ts
+import { sentence } from 'jsr:@ndaidong/txtgen';
+sentence();
+```
 
-## Usage
+You can still use `npm:` specifiers as before:
 
-### Node.js:
+```ts
+import { sentence } from 'npm:txtgen';
+sentence();
+```
+
+Or import from esm.sh
+
+```ts
+import { sentence } from 'https://esm.sh/txtgen';
+sentence();
+```
+
+### Node.js & Bun
+
+```bash
+npm i txtgen
+# pnpm
+pnpm i txtgen
+# yarn
+yarn add txtgen
+# bun
+bun add txtgen
+```
 
 ```js
-import { sentence } from "txtgen";
+import { sentence } from 'txtgen';
 
-// with CommonJS environment
-// const { sentence } = require('txtgen/dist/cjs/txtgen.js')
+// CommonJS environment
+// const { sentence } = require('txtgen');
 
 sentence();
 ```
 
 ### Browsers:
 
-Currently, ECMAScript modules work fine on almost all browsers:
-
 ```html
 <script type="module">
-import { sentence } from 'https://unpkg.com/txtgen/dist/txtgen.esm.js'
+import { sentence } from 'https://unpkg.com/txtgen/esm/mod.js'
 console.log(sentence())
-</script>
-```
-
-With outdated browsers, we can use the traditional method:
-
-```html
-<script type="text/javascript" src="https://unpkg.com/txtgen/dist/txtgen.min.js"></script>
-
-<script>
-console.log(window.txtgen.sentence())
 </script>
 ```
 
@@ -146,15 +159,26 @@ const phrase = lorem();
 console.log(phrase); // => nisi blandit feugiat tempus imperdiet etiam eu mus augue
 ```
 
-## Test
+## Development
+
+Since v4.x.x, we switched to [Deno](https://docs.deno.com/runtime/manual/) platform, and use [DNT](https://github.com/denoland/dnt) to build Node.js packages.
 
 ```bash
 git clone https://github.com/ndaidong/txtgen.git
 cd txtgen
-npm install
-npm test
+
+# test
+deno test
+
+# build npm packages
+deno task build
+
+cd npm
+node test_runner.js
 ```
 
 # License
 
 The MIT License (MIT)
+
+---

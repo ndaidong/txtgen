@@ -67,6 +67,13 @@ const makeSentenceFromTemplate = (): string => {
   return make(rand(sentenceTemplates));
 };
 
+/**
+ * Generate a sentence with or without starting phrase
+ *
+ * @param ignoreStartingPhrase. Set to true to add a short phrase at the begining
+ * @returns A sentence
+ */
+
 export const sentence = (ignoreStartingPhrase: boolean = false): string => {
   const phrase = ignoreStartingPhrase ? "" : randomStartingPhrase();
   let s = phrase + makeSentenceFromTemplate();
@@ -74,6 +81,13 @@ export const sentence = (ignoreStartingPhrase: boolean = false): string => {
   s += pickLastPunc();
   return s;
 };
+
+/**
+ * Generate a paragraph with given sentence count
+ *
+ * @param len Sentence count, 3 to 15
+ * @returns A paragraph
+ */
 
 export const paragraph = (len: number = 0): string => {
   if (!len) {
@@ -87,6 +101,13 @@ export const paragraph = (len: number = 0): string => {
   }
   return a.join(" ");
 };
+
+/**
+ * Generate an article with given paragraph count
+ *
+ * @param len Paragraph count, 3 to 15
+ * @returns An article
+ */
 
 export const article = (len: number = 0): string => {
   if (!len) {

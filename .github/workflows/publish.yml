@@ -1,4 +1,4 @@
-name: Publish
+name: publish
 
 on:
   push:
@@ -14,12 +14,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: npx jsr publish
+      - uses: denoland/setup-deno@v1
+        with:
+          deno-version: 1.x
+      - name: npm build
+        run: deno task build
       - uses: actions/setup-node@v4
         with:
           node-version: '20.x'
           registry-url: 'https://registry.npmjs.org'
-      - name: npm build
-        run: deno task build
       - name: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
